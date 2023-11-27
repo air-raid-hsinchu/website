@@ -16,23 +16,22 @@ jobs:
       matrix:
         node-version: [19.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    defaults:
+     run:
+       working-directory: ./frontend/
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        working-directory: ./frontend
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: './frontend/package-lock.json'
     - name: Install dependencies
-      working-directory: ./frontend
       run: npm install
     - name: Build
-      working-directory: ./frontend
       run: npm run build
     - name: Deploy
-      working-directory: ./frontend
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
