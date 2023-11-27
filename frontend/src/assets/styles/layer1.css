@@ -1,0 +1,32 @@
+#scene {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#house {
+  margin-top: 15%;
+  margin-left: 45%;
+  height: auto;
+}
+
+#buildings_1 {
+  margin-top: 12%; 
+  margin-left: 10%;
+  max-height: 100%;
+  height: auto;
+}
+
+#buildings_2 {
+  margin-top: 12%;
+  margin-left: 80%;
+  height: auto;
+}
+
+#airship {
+  margin-top: 5%;
+  margin-left: 70%;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
