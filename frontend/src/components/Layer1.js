@@ -12,19 +12,18 @@ class Layer1 extends Component {
     render() {
         return (
             <>
-                <div id="scene">
-                    
-                    <div data-depth="0.4"  id="buildings_1" >
-                        <img src="./buildings_1.png" alt="buildings_1"/>
-                    </div>
-                    <div data-depth="0.4" id="buildings_2" >
-                        <img src="./buildings_2.png" alt="buildings_2" />
-                    </div>
-                    <div data-depth="0.5"  id="airship">
-                        <img src="./airship.png" alt="airship" />
-                    </div>
-                    <div data-depth="0.2" id="house" >
-                        <img src="./house.png" alt="house" />
+                <div className="container">
+                    <div className="row" id="scene">
+                        <div data-depth="0.4" id="buildings">
+                            <img src="./buildings.png" alt="buildings"  className="img-fluid" />
+                        </div>
+                        <div data-depth="0.6" id="airship">
+                            <img src="./airship.png" alt="airship" className="img-fluid"/>
+                        </div>
+                        <div data-depth="0.2" id="house">
+                            <img src="./house.png" alt="house" className="img-fluid" />
+                        </div>
+
                     </div>
                 </div>
             </>
