@@ -1,6 +1,5 @@
 
 #scene div {
-  /* width: fit-content;。 */
   text-align: center;
 }
 
@@ -18,8 +17,3 @@
   z-index: 3;
   width: 100%;
 }
-
-/* .overlap-img {
-  width: 100vw;
-  height: 100%;
-} */

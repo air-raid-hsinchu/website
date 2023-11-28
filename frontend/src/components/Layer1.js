@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import '../assets/styles/layer1.css'; // Import your CSS file for styling
 import Parallax from 'parallax-js';
 
 class Layer1 extends Component {
@@ -12,7 +11,7 @@ class Layer1 extends Component {
     render() {
         return (
             <>
-                <div className="container">
+                <div className="container overflow-hidden">
                     <div className="row" id="scene">
                         <div data-depth="0.4" id="buildings">
                             <img src="./buildings.png" alt="buildings"  className="img-fluid" />
