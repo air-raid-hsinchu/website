@@ -1,19 +1,42 @@
-
 #scene div {
   text-align: center;
 }
 
-#buildings {
+#planes {
   z-index: 1;
   width: 100%;
 }
 
-#airship {
+#smoke {
   z-index: 2;
+  height: 100%;
+}
+
+#text {
+  z-index: 3;
   width: 100%;
 }
 
-#house {
-  z-index: 3;
-  width: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+.page-container {
+  width: 90%;
+  height: 90%;
+}
+
+.background {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+  height: 100%;
+}
+
+.element {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
