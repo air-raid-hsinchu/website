@@ -1,23 +1,29 @@
 import img1 from "../../assets/images/1-2.jpg"; // 空襲底下的人民生活
 import img2 from "../../assets/images/1-3.png"; // 二站新竹空襲地圖
 import img3 from "../../assets/images/1-4.jpg"; // 黃旺成與踈開
-import backgroundImg from "../../assets/images/bg1.png" // 背景圖片
-import { useRef, useState } from "react";
+import backgroundImg from "../../assets/images/bg2.png" // 背景圖片
+import { useRef, useState, useEffect } from "react";
 
 const ImageCard = ({ imgSrc, imgAlt, imgText, size }) => {
     const imgRef = useRef(null);
     const [imgHeight, setImgHeight] = useState(0);
     const [imgWidth, setImgWidth] = useState(0);
 
+    useEffect(() => {
+        window.addEventListener("resize", handleLoad);
+
+        return () => {
+            window.removeEventListener("resize", handleLoad);
+        };
+    }, []);
+
     const handleLoad = () => {
         if (imgRef.current) {
             const { height, width } = imgRef.current;
             setImgHeight(height);
             setImgWidth(width);
-            console.log(height, width)
         }
     };
-
 
     return (
         <div className="bg-image shadow-lg rounded p-0" style={{ height: imgHeight, width: imgWidth }}>
@@ -56,22 +62,20 @@ const Page3 = () => {
                 }}
             >
                 <div className="row align-items-center h-100">
-                    <div className="row">
-                        <div className="col-1"></div>
+                    <div className="row" style={{marginLeft: 30}}>
                         <div className="col-4">
-                            <ImageCard imgSrc={img1} imgAlt="空襲底下的人民生活" imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"} size={{ mh: '70vh', mw: '50vw' }} />
+                            <ImageCard imgSrc={img1} imgAlt="空襲底下的人民生活" imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"} size={{ mh: '73vh', mw: '70vw' }} />
                         </div>
                         <div className="col-2"></div>
-                        <div className="col-5 d-flex flex-column">
+                        <div className="col-6 d-flex flex-column">
                             <div className="row">
-                                <ImageCard imgSrc={img2} imgAlt="二站新竹空襲地圖" imgText="〈二站新竹空襲地圖〉" size={{ mh: '30vh', mw: '50vw' }} />
+                                <ImageCard imgSrc={img2} imgAlt="二站新竹空襲地圖" imgText="〈二站新竹空襲地圖〉" size={{ mh: '35vh', mw: '50vw' }} />
                             </div>
 
                             <div className="row mt-auto">
-                                <ImageCard imgSrc={img3} imgAlt="黃旺成與踈開" imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"} size={{ mh: '30vh', mw: '50vw' }} />
+                                <ImageCard imgSrc={img3} imgAlt="黃旺成與踈開" imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"} size={{ mh: '32vh', mw: '50vw' }} />
                             </div>
                         </div>
-                        {/* <div className="col-1"></div> */}
 
                     </div>
                 </div>
