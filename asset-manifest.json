@@ -1,13 +1,31 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.24578b79.css",
-    "main.js": "/website/static/js/main.1ac91052.js",
-    "index.html": "/website/index.html",
-    "main.24578b79.css.map": "/website/static/css/main.24578b79.css.map",
-    "main.1ac91052.js.map": "/website/static/js/main.1ac91052.js.map"
+    "main.css": "/static/css/main.73359db6.css",
+    "main.js": "/static/js/main.0254eaa7.js",
+    "static/media/bg0.png": "/static/media/bg0.256843eba02ea58b958e.png",
+    "static/media/展場動線圖.png": "/static/media/展場動線圖.e6c360a3ed51c81d4778.png",
+    "static/media/1-1.png": "/static/media/1-1.61a991709857953b312f.png",
+    "static/media/1-4.jpg": "/static/media/1-4.7df7444dd99f9007e35f.jpg",
+    "static/media/bg1.png": "/static/media/bg1.b353067852b84eb6bbd1.png",
+    "static/media/1-3.png": "/static/media/1-3.bacf564527cf34990338.png",
+    "static/media/background.png": "/static/media/background.82c014141e5265a8b72d.png",
+    "static/media/1-0-1.png": "/static/media/1-0-1.020f3c79ea84a1830988.png",
+    "static/media/1-0-2.png": "/static/media/1-0-2.e5e8276687037e608f63.png",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/1-2.jpg": "/static/media/1-2.4c0383a6fad1fc1a18f8.jpg",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/index.html",
+    "main.73359db6.css.map": "/static/css/main.73359db6.css.map",
+    "main.0254eaa7.js.map": "/static/js/main.0254eaa7.js.map"
   },
   "entrypoints": [
-    "static/css/main.24578b79.css",
-    "static/js/main.1ac91052.js"
+    "static/css/main.73359db6.css",
+    "static/js/main.0254eaa7.js"
   ]
 }
