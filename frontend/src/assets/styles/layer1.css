@@ -1,32 +1,42 @@
-#scene {
-  width: 100vw;
+#scene div {
+  text-align: center;
+}
+
+#planes {
+  z-index: 1;
+  width: 100%;
+}
+
+#smoke {
+  z-index: 2;
+  height: 100%;
+}
+
+#text {
+  z-index: 3;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-container {
+  width: 90%;
+  height: 90%;
+}
+
+.background {
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+  height: 100%;
+}
+
+.element {
   height: 100vh;
-  overflow: hidden;
-}
-
-#house {
-  margin-top: 15%;
-  margin-left: 45%;
-  height: auto;
-}
-
-#buildings_1 {
-  margin-top: 12%; 
-  margin-left: 10%;
-  max-height: 100%;
-  height: auto;
-}
-
-#buildings_2 {
-  margin-top: 12%;
-  margin-left: 80%;
-  height: auto;
-}
-
-#airship {
-  margin-top: 5%;
-  margin-left: 70%;
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
