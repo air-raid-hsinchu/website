@@ -59,19 +59,19 @@ const Page3 = () => {
                     <div className="row">
                         <div className="col-1"></div>
                         <div className="col-4">
-                            <ImageCard imgSrc={img1} imgAlt="空襲底下的人民生活" imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"} size={{ mh: '80vh', mw: '50vw' }} />
+                            <ImageCard imgSrc={img1} imgAlt="空襲底下的人民生活" imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"} size={{ mh: '70vh', mw: '50vw' }} />
                         </div>
                         <div className="col-2"></div>
-                        <div className="col-4 d-flex flex-column">
+                        <div className="col-5 d-flex flex-column">
                             <div className="row">
-                                <ImageCard imgSrc={img2} imgAlt="二站新竹空襲地圖" imgText="〈二站新竹空襲地圖〉" size={{ mh: '35vh', mw: '50vw' }} />
+                                <ImageCard imgSrc={img2} imgAlt="二站新竹空襲地圖" imgText="〈二站新竹空襲地圖〉" size={{ mh: '30vh', mw: '50vw' }} />
                             </div>
 
                             <div className="row mt-auto">
-                                <ImageCard imgSrc={img3} imgAlt="黃旺成與踈開" imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"} size={{ mh: '35vh', mw: '50vw' }} />
+                                <ImageCard imgSrc={img3} imgAlt="黃旺成與踈開" imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"} size={{ mh: '30vh', mw: '50vw' }} />
                             </div>
                         </div>
-                        <div className="col-1"></div>
+                        {/* <div className="col-1"></div> */}
 
                     </div>
                 </div>
