@@ -32,8 +32,6 @@ html {
   background-repeat: repeat;
   height: 100%;
   width: 100%;
-  /* scroll-behavior: smooth;
-  scroll-snap-type: y mandatory; */
   position: absolute;
   overflow: auto;
 }
@@ -44,5 +42,4 @@ html {
   justify-content: center;
   align-items: center;
   margin-bottom: 2vh
-  /* scroll-snap-align: center; */
 }

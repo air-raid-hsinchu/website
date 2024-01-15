@@ -2,7 +2,6 @@ import { Element } from 'react-scroll';
 import '../../assets/styles/layer1.css';
 import { Fade } from '@mui/material';
 import { useState, useEffect, useRef, createRef } from 'react';
-// import useScrollSnap from 'react-use-scroll-snap';
 import createScrollSnap from 'scroll-snap';
 import Page1 from './page1';
 import Page2 from './page2';

@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/styles/index.css";
 import { HashRouter, Route, Routes, Link } from "react-router-dom";
 
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';

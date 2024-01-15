@@ -3,7 +3,7 @@ const Page5 = () => {
     return (
         <>
             <div className="d-flex justify-content-center align-items-center h-100 w-100">
-                <div className="text-center text-black">
+                <div className="text-center text-black" style={{fontFamily: 'nstc'}}>
                     <h1>展覽資訊</h1>
                     <p>轟炸 · 新竹州</p>
                     <p>2024 2/1～2024.2/29</p>

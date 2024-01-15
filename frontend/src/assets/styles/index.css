@@ -13,3 +13,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: "nstc-bold";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nstc-black";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nstc-lighter";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-ExtraLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nstc-medium";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nstc-light";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "nstc";   /*Can be any text*/
+  src: url("../font/NotoSerifTC-Regular.otf") format("opentype");
+}
