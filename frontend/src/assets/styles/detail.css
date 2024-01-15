@@ -1,11 +1,11 @@
 .layer2bg {
-    background-image: url("../images/layer2_bg1.png");
+    background-image: url("../images/layer2_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    z-index: 0;
     position: absolute;
-    overflow: auto;
 }
 
 .homelink {
@@ -30,4 +30,6 @@ h2 {
 
 #text {
     margin-top: 10em;
+    font-family: 'nstc';
+    color: 'black';
 }
