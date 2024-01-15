@@ -22,15 +22,20 @@ html {
 }
 
 .page-container {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .background {
   background-image: url("../images/background.png");
-  background-size: cover;
-  background-repeat: repeat-y;
+  background-size: contain;
+  background-repeat: repeat;
   height: 100%;
+  width: 100%;
+  /* scroll-behavior: smooth;
+  scroll-snap-type: y mandatory; */
+  position: absolute;
+  overflow: auto;
 }
 
 .element {
@@ -38,5 +43,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 2vh
+  /* scroll-snap-align: center; */
 }

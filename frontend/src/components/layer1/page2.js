@@ -4,7 +4,7 @@ const Page2 = () => {
     return (
         <>
             <div
-                className="container w-100 h-100"
+                className="w-100 h-100"
                 style={{
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundSize: 'contain',

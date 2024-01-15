@@ -23,14 +23,17 @@ const Page1 = ({ handleClick }) => {
                     backgroundPosition: 'center',
                 }}
             >
-                <div id="scene">
-                    <div data-depth="0.3" id="planes">
-                        <img src={planeImg} alt="planes" className="img-fluid" />
+                <div className='d-flex justify-content-center align-items-center h-75 w-75' style={{minWidth: 900}}>
+                    <div id="scene">
+                        <div data-depth="0.3" id="planes">
+                            <img src={planeImg} alt="planes" className="img-fluid" />
+                        </div>
+
+                        <div data-depth="0.15" id="text">
+                            <img src={titleImg} alt="text" className="img-fluid" onClick={handleClick} />
+                        </div>
                     </div>
 
-                    <div data-depth="0.15" id="text">
-                        <img src={titleImg} alt="text" className="img-fluid" onClick={handleClick} />
-                    </div>
                 </div>
 
             </div>
