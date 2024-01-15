@@ -9,6 +9,7 @@ import Page3 from './page3';
 import Page4 from './page4';
 import Page5 from './page5';
 import Page6 from './page6';
+import SocialBar from '../socialBar';
 
 const fadeInOptions = {
     timeout: { enter: 2000, exit: 0 }
@@ -33,7 +34,6 @@ const useScrollSnap = (ref, settings, callback) => {
 
     return [scrollBind, scrollUnbind];
 }
-
 
 const Layer1 = () => {
     const scrollRef = createRef();
@@ -80,7 +80,12 @@ const Layer1 = () => {
 
     return (
         <>
+            <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={{ enter: 2000, exit: 2000 }}>
+                {SocialBar}
+            </Fade>
+
             <div className='background' ref={scrollRef}>
+
                 <Element id="section1" className="element" >
                     <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
                         <div ref={elementRefs.current[0]} className='page-container'>

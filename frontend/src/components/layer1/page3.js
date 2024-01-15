@@ -27,9 +27,9 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
                 <div className="hover-overlay">
                     <div
                         className="bg-image mask d-flex justify-content-center align-items-center"
-                        style={{ backgroundColor: "rgba(100, 100, 100, 0.8)", height: size.height, width: size.width }}
+                        style={{ backgroundColor: "rgba(90, 90, 90, 0.3)", height: size.height, width: size.width }}
                     >
-                        <pre className="text-white mb-1 fs-4 fw-bolder lh-sm">{imgText}</pre>
+                        <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{overflow: 'hidden', fontFamily: 'nstc'}}>{imgText}</pre>
                     </div>
                 </div>
             </a>
