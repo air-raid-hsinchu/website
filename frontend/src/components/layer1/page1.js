@@ -16,7 +16,7 @@ const Page1 = ({ handleClick }) => {
     return (
         <>
             <div
-                className="container h-100 w-100"
+                className="d-flex justify-content-center align-items-center h-100 w-100"
                 style={{
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundSize: 'cover',
