@@ -21,6 +21,16 @@ html {
   scroll-behavior: smooth;
 }
 
+.position-pin {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.position-pin:hover{
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 .page-container {
   width: 100%;
   height: 100%;
