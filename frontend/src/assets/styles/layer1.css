@@ -32,15 +32,24 @@ html {
   background-repeat: repeat;
   height: 100%;
   width: 100%;
-  position: absolute;
-  
-  overflow-x: hidden;
+  scroll-snap-type: y proximity;
+  /* overflow-y: scroll; */
 }
 
-.element {
+#section1, #section4, #section5, #section6{
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: center;
+  margin-bottom: 2vh
+}
+
+#section2, #section3{
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
   margin-bottom: 2vh
 }

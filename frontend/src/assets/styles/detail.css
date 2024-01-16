@@ -8,6 +8,16 @@
     position: absolute;
 }
 
+.background {
+    background-image: url("../images/background.png");
+    background-size: contain;
+    background-repeat: repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow-y: scroll;
+}
+
 .homelink {
     position: fixed;
     top: 5%;

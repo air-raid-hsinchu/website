@@ -6,7 +6,7 @@ import backgroundImg from "../../assets/images/bg21.png" // 背景圖片
 import { useRef, useState, useEffect } from "react";
 
 const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
-    
+
     return (
         <div
             className="bg-image shadow-lg rounded p-0"
@@ -22,18 +22,16 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
             <img
                 src={imgSrc}
                 alt={imgAlt}
-                style={{ maxHeight: size.height }}
+                style={{ width: size.width, height: size.height }}
             />
-            <a href="#!">
-                <div className="hover-overlay">
-                    <div
-                        className="bg-image mask d-flex justify-content-center align-items-center"
-                        style={{ backgroundColor: "rgba(90, 90, 90, 0.3)", height: size.height, width: size.width }}
-                    >
-                        <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{overflow: 'hidden', fontFamily: 'nstc'}}>{imgText}</pre>
-                    </div>
+            <div className="hover-overlay">
+                <div
+                    className="bg-image mask d-flex justify-content-center align-items-center"
+                    style={{ backgroundColor: "rgba(90, 90, 90, 0.3)", height: size.height, width: size.width }}
+                >
+                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{ overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
                 </div>
-            </a>
+            </div>
         </div>
 
     );
@@ -80,9 +78,10 @@ const Page3 = () => {
     return (
         <>
             <div
-                className="w-100 h-100"
+                className="w-100"
                 ref={containerRef}
                 style={{
+                    height: '120vh',
                     backgroundImage: `url(${backgroundImg})`,
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
@@ -101,7 +100,7 @@ const Page3 = () => {
                 <ImageCard
                     imgSrc={img2}
                     imgAlt="二站新竹空襲地圖"
-                    imgText={"〈二站新竹空襲地圖〉"}
+                    imgText={"〈二戰新竹空襲地圖〉"}
                     size={{ height: bgImgSize.height * 0.426, width: bgImgSize.width * 0.423 }}
                     offset={{ y: bgImgOffset.y + bgImgSize.height * 0.055, x: bgImgOffset.x + bgImgSize.width * 0.523 }}
                 />
@@ -112,26 +111,7 @@ const Page3 = () => {
                     size={{ height: bgImgSize.height * 0.375, width: bgImgSize.width * 0.135 }}
                     offset={{ y: bgImgOffset.y + bgImgSize.height * 0.56, x: bgImgOffset.x + bgImgSize.width * 0.525 }}
                 />
-                {/* <div className="row align-items-center h-100">
-                    <div className="row" style={{marginLeft: 30}}>
-                        <div className="col-4">
-                            <ImageCard imgSrc={img1} imgAlt="空襲底下的人民生活" imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"} size={{ mh: '73vh', mw: '70vw' }} />
-                        </div>
-                        <div className="col-2"></div>
-                        <div className="col-6 d-flex flex-column">
-                            <div className="row">
-                                <ImageCard imgSrc={img2} imgAlt="二站新竹空襲地圖" imgText="〈二站新竹空襲地圖〉" size={{ mh: '35vh', mw: '50vw' }} />
-                            </div>
-
-                            <div className="row mt-auto">
-                                <ImageCard imgSrc={img3} imgAlt="黃旺成與踈開" imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"} size={{ mh: '32vh', mw: '50vw' }} />
-                            </div>
-                        </div>
-
-                    </div>
-                </div> */}
-
-
+               
             </div>
 
         </>
