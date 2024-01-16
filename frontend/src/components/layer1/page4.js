@@ -1,7 +1,7 @@
 import mapImg from '../../assets/images/展場動線圖.png';
 import { useState, useEffect, useRef } from 'react';
 
-const PositionPin = ({ offset, size, content, title, barHeight, contentPosition, contentWidth }) => {
+const PositionPin = ({ offset, size, content, title, barHeight, contentPosition, contentWidth, goto }) => {
     const [toggle, setToggle] = useState(false);
 
     return (
@@ -29,7 +29,7 @@ const PositionPin = ({ offset, size, content, title, barHeight, contentPosition,
                     {content}
                 </pre>
             }
-            <a href={`#${content}`}
+            <a href={`#${goto}`}
                 className='position-pin position-absolute d-flex flex-column align-items-center justify-content-center'
                 style={{
                     bottom: -offset.y + window.innerHeight,
@@ -111,15 +111,17 @@ const Page4 = () => {
                         barHeight={100}
                         contentPosition={0}
                         contentWidth={300}
+                        goto='areaA'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
                         size={{ width: 200, height: 200 }}
                         content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
                         title={'B\n新竹陳的日記本'}
-                        barHeight={90}
+                        barHeight={100}
                         contentPosition={1}
                         contentWidth={340}
+                        goto='areaB'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
@@ -129,6 +131,7 @@ const Page4 = () => {
                         barHeight={100}
                         contentPosition={1}
                         contentWidth={350}
+                        goto='areaC'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.472, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
@@ -138,6 +141,7 @@ const Page4 = () => {
                         barHeight={90}
                         contentPosition={1}
                         contentWidth={279}
+                        goto='areaD'
                     />
                 </div>
 

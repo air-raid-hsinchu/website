@@ -1,7 +1,7 @@
 import "../../assets/styles/detail.css";
 import classImg from "../../assets/images/2-2class.png";
 
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 
@@ -15,11 +15,11 @@ const Page22 = () => {
     <Fade in={true} timeout={fadeInOptions.timeout}>
       <div className="background">
         <div className="layer2bg">
-          <Link to="/">
+          <HashLink to="/#section3">
             <div className="homelink">
               <i class="fa-solid fa-arrow-left-long" /> Back to List
             </div>
-          </Link>
+          </HashLink>
           <div>{SocialBar}</div>
           <div className="container h-100">
             <div className=" h-25"></div>
