@@ -62,15 +62,16 @@ const Page3 = () => {
             const width = img.width;
             const height = img.height;
             const top = container.offsetTop;
-            console.log(top);
+            const left = container.offsetLeft;
+
             if (currentWidth / currentHeight > width / height) {
                 const newWidth = currentHeight * width / height;
                 setBgImgSize({ width: newWidth, height: currentHeight });
-                setBgImgOffset({ x: window.scrollX + (currentWidth - newWidth) / 2, y: top });
+                setBgImgOffset({ x: left + window.scrollX + (currentWidth - newWidth) / 2, y: top });
             } else {
                 const newHeight = currentWidth * height / width;
                 setBgImgSize({ width: currentWidth, height: newHeight });
-                setBgImgOffset({ x: window.scrollX, y: top + (currentHeight - newHeight) / 2 });
+                setBgImgOffset({ x: left + window.scrollX, y: top + (currentHeight - newHeight) / 2 });
             }
         };
     };

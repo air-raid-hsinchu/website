@@ -1,5 +1,4 @@
 import mapImg from '../../assets/images/展場動線圖.png';
-import SocialBar from '../socialBar';
 
 const Page4 = () => {
     return (
