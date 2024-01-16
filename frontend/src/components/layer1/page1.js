@@ -29,7 +29,7 @@ const Page1 = ({ handleClick }) => {
                             <img src={planeImg} alt="planes" className="img-fluid" />
                         </div>
 
-                        <div data-depth="0.15" id="text">
+                        <div data-depth="0.15" id="main-title">
                             <img src={titleImg} alt="text" className="img-fluid" onClick={handleClick} />
                         </div>
                     </div>
