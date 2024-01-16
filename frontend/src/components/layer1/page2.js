@@ -1,4 +1,4 @@
-import backgroundImg from '../../assets/images/1-1.png';
+import backgroundImg from '../../assets/images/1-1removebg.png';
 
 const Page2 = () => {
     return (
