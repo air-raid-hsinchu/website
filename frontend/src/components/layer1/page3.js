@@ -9,7 +9,7 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
 
     return (
         <div
-            className="bg-image shadow-lg rounded p-0"
+            className="bg-image shadow-lg rounded p-0 image-card"
             style={{
                 position: 'absolute',
                 height: size.height,
@@ -27,9 +27,9 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
             <div className="hover-overlay">
                 <div
                     className="bg-image mask d-flex justify-content-center align-items-center"
-                    style={{ backgroundColor: "rgba(90, 90, 90, 0.3)", height: size.height, width: size.width }}
+                    style={{ backgroundColor: "rgba(90, 90, 90, 0.5)", height: size.height, width: size.width }}
                 >
-                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{ overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
+                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{letterSpacing: 5, overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
                 </div>
             </div>
         </div>

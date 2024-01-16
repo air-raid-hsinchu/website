@@ -11,7 +11,7 @@ import Page6 from './page6';
 import SocialBar from '../socialBar';
 
 const fadeInOptions = {
-    timeout: { enter: 2000, exit: 0 }
+    timeout: { enter: 1000, exit: 0 }
 }
 
 const pageNum = 6;

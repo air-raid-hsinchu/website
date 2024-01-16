@@ -27,6 +27,7 @@
     color: white;
     text-decoration: none;
     text-shadow: 0.1em 0.1em 0.2em black;
+    z-index: 10;
 }
 
 h1 {

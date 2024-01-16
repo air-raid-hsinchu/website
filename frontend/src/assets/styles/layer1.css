@@ -46,6 +46,17 @@ html {
   overflow-x: hidden;
 }
 
+.image-card {
+  /* transition: margin-left 0.3s ease; */
+  transition: margin 0.3s ease-in-out;
+}
+
+.image-card:hover {
+  /* margin-left: 10px; */
+  margin-left: 10px;
+  margin-top: -10px;
+}
+
 #section1, #section4, #section5, #section6{
   height: 100vh;
   display: flex;
