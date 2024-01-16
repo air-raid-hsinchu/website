@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.69663844.css",
-    "main.js": "/website/static/js/main.8d13b8bf.js",
+    "main.css": "/website/static/css/main.cec21487.css",
+    "main.js": "/website/static/js/main.b14155d9.js",
     "static/media/NotoSerifTC-Bold.otf": "/website/static/media/NotoSerifTC-Bold.4f4b6c4c736a9804bb7d.otf",
     "static/media/NotoSerifTC-Medium.otf": "/website/static/media/NotoSerifTC-Medium.69d5d7f1496aa456028e.otf",
     "static/media/NotoSerifTC-Black.otf": "/website/static/media/NotoSerifTC-Black.26c9b43b9a1071536536.otf",
@@ -14,11 +14,13 @@
     "static/media/1-4.jpg": "/website/static/media/1-4.c575e81b6ff80ff028a3.jpg",
     "static/media/2-2class.png": "/website/static/media/2-2class.c0c00694cc266355e9ac.png",
     "static/media/1-3.png": "/website/static/media/1-3.562493a6796dc89a9ab9.png",
+    "static/media/1-1-1.png": "/website/static/media/1-1-1.72bb471b2214567d52cd.png",
     "static/media/fa-solid-900.ttf": "/website/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/background.png": "/website/static/media/background.a29a5afc91a6929abe9b.png",
     "static/media/fa-brands-400.ttf": "/website/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/website/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/展場動線圖.png": "/website/static/media/展場動線圖.3b46989c12227771d3bf.png",
+    "static/media/1-1-2.png": "/website/static/media/1-1-2.deeabfc579ae3a509b71.png",
     "static/media/fa-brands-400.woff2": "/website/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
     "static/media/1-0-1.png": "/website/static/media/1-0-1.f8e1bc6bbd2d5e97d8d5.png",
     "static/media/layer2_bg.png": "/website/static/media/layer2_bg.5ab1287eeb89cb5d6ff3.png",
@@ -29,11 +31,11 @@
     "static/media/fa-v4compatibility.ttf": "/website/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/website/index.html",
-    "main.69663844.css.map": "/website/static/css/main.69663844.css.map",
-    "main.8d13b8bf.js.map": "/website/static/js/main.8d13b8bf.js.map"
+    "main.cec21487.css.map": "/website/static/css/main.cec21487.css.map",
+    "main.b14155d9.js.map": "/website/static/js/main.b14155d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.69663844.css",
-    "static/js/main.8d13b8bf.js"
+    "static/css/main.cec21487.css",
+    "static/js/main.b14155d9.js"
   ]
 }
