@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website/static/css/main.5a324e1f.css",
-    "main.js": "/website/static/js/main.2b76db22.js",
+    "main.js": "/website/static/js/main.46069a13.js",
     "static/media/NotoSerifTC-Bold.otf": "/website/static/media/NotoSerifTC-Bold.4f4b6c4c736a9804bb7d.otf",
     "static/media/NotoSerifTC-Medium.otf": "/website/static/media/NotoSerifTC-Medium.69d5d7f1496aa456028e.otf",
     "static/media/NotoSerifTC-Black.otf": "/website/static/media/NotoSerifTC-Black.26c9b43b9a1071536536.otf",
@@ -20,23 +20,23 @@
     "static/media/background.png": "/website/static/media/background.a29a5afc91a6929abe9b.png",
     "static/media/fa-brands-400.ttf": "/website/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/website/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
-    "static/media/展場動線圖.png": "/website/static/media/展場動線圖.3b46989c12227771d3bf.png",
     "static/media/1-1-2.png": "/website/static/media/1-1-2.deeabfc579ae3a509b71.png",
     "static/media/fa-brands-400.woff2": "/website/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
     "static/media/1-0-1.png": "/website/static/media/1-0-1.f8e1bc6bbd2d5e97d8d5.png",
     "static/media/layer2_bg.png": "/website/static/media/layer2_bg.5ab1287eeb89cb5d6ff3.png",
     "static/media/1-2.jpg": "/website/static/media/1-2.191e4b1fc55341a8adf7.jpg",
     "static/media/fa-regular-400.ttf": "/website/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/venue_white.png": "/website/static/media/venue_white.0b092ba072c4eb25bb57.png",
     "static/media/1-0-2.png": "/website/static/media/1-0-2.0e346e2b991fe20fdc29.png",
     "static/media/fa-regular-400.woff2": "/website/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
     "static/media/fa-v4compatibility.ttf": "/website/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/website/index.html",
     "main.5a324e1f.css.map": "/website/static/css/main.5a324e1f.css.map",
-    "main.2b76db22.js.map": "/website/static/js/main.2b76db22.js.map"
+    "main.46069a13.js.map": "/website/static/js/main.46069a13.js.map"
   },
   "entrypoints": [
     "static/css/main.5a324e1f.css",
-    "static/js/main.2b76db22.js"
+    "static/js/main.46069a13.js"
   ]
 }
