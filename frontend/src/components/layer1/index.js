@@ -2,6 +2,7 @@ import { Element } from 'react-scroll';
 import '../../assets/styles/layer1.css';
 import { Fade } from '@mui/material';
 import { useState, useEffect, useRef, createRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import Page1 from './page1';
 import Page2 from './page2';
 import Page3 from './page3';
@@ -17,16 +18,25 @@ const fadeInOptions = {
 const pageNum = 6;
 
 const Layer1 = () => {
-    const elementRefs = useRef([]);
+    const elementRefs = useRef(Array(pageNum).fill().map(() => createRef()));
     const [isInViewPort, setIsInViewPort] = useState(Array(pageNum).fill(false));
-
-    if (elementRefs.current.length !== pageNum) {
-        elementRefs.current = Array(pageNum)
-            .fill()
-            .map((_, i) => elementRefs.current[i] || createRef());
-    }
+    const location = useLocation();
 
     useEffect(() => {
+        if (location.state && location.state.section) {
+            const section = location.state.section;
+            const sectionElement = document.getElementById(`section${section}`);
+            if (sectionElement) {
+                sectionElement.scrollIntoView({ block: 'start' });
+            }
+            setIsInViewPort((prev) => {
+                const newState = [...prev];
+                newState[section - 1] = true;
+
+                return newState;
+            });
+        }
+
         elementRefs.current.forEach((elementRef) => {
             const observer = new IntersectionObserver(([entry]) => {
                 setIsInViewPort((prev) => {

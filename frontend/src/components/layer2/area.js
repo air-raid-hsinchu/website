@@ -1,7 +1,7 @@
 import bgImg from "../../assets/images/2-5bg.png";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const fadeInOptions = {
     timeout: { enter: 1000, exit: 0 }
@@ -39,11 +39,11 @@ const Area = ({ where }) => {
                     height: "100vh",
                     width: "100vw",
                 }}>
-                    <HashLink to="/#section4" >
+                    <Link state={{ section: 4 }} to="/" >
                         <div className="homelink">
-                            <i class="fa-solid fa-arrow-left-long" /> Back to List
+                            <i className="fa-solid fa-arrow-left-long" /> Back to List
                         </div>
-                    </HashLink>
+                    </Link>
                     <div>{SocialBar}</div>
                     <div className="container h-100">
                         <div className="h-25"></div>

@@ -2,6 +2,7 @@ import backgroundImg from '../../assets/images/1-1removebg.png';
 import newsImg from '../../assets/images/1-1-1.png';
 import MdfkImg from '../../assets/images/1-1-2.png';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset, rotate }) => {
 
@@ -88,19 +89,22 @@ const Page2 = () => {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                <ImageCard
-                    imgSrc={newsImg}
-                    imgAlt="展覽簡介"
-                    imgText={"展覽簡介"}
-                    size={{ height: bgImgSize.height * 0.495, width: bgImgSize.width * 0.213 }}
-                    offset={{ y: bgImgOffset.y + bgImgSize.height * 0.182, x: bgImgOffset.x + bgImgSize.width * 0.326 }}
-                    rotate='rotate(-7deg)'
-                />
+                <Link to='/detail1'>
+
+                    <ImageCard
+                        imgSrc={newsImg}
+                        imgAlt="展覽簡介"
+                        imgText={"展覽簡介"}
+                        size={{ height: bgImgSize.height * 0.495, width: bgImgSize.width * 0.213 }}
+                        offset={{ y: bgImgOffset.y + bgImgSize.height * 0.182, x: bgImgOffset.x + bgImgSize.width * 0.326 }}
+                        rotate='rotate(-7deg)'
+                    />
+                </Link>
                 <img
                     src={MdfkImg}
                     alt={"mdfk"}
-                    style={{ 
-                        height: bgImgSize.height * 0.424, 
+                    style={{
+                        height: bgImgSize.height * 0.424,
                         width: bgImgSize.width * 0.191,
                         top: bgImgOffset.y + bgImgSize.height * 0.576,
                         left: bgImgOffset.x + bgImgSize.width * 0.428,

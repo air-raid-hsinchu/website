@@ -1,14 +1,23 @@
-import mapImg from '../../assets/images/展場動線圖.png';
+import mapImg from '../../assets/images/venue_white.png';
 import { useState, useEffect, useRef } from 'react';
 import { Transition } from 'react-transition-group';
 
 
 
-const PositionPin = ({ offset, size, content, title, barHeight, contentPosition, contentWidth, goto }) => {
+const PositionPin = ({ offset, size, content, title, contentPosition, contentWidth, goto }) => {
     const [toggle, setToggle] = useState(false);
     const containerRef = useRef(null);
+    const titleRef = useRef(null);
     const contentRef = useRef(null);
     const toggleDelta = 20;
+
+    // useEffect(() => {
+    //     if (titleRef.current === null) return;
+    //     const titleRect = titleRef.current.getBoundingClientRect();
+    //     setBarHeight(size.height - titleRect.height);
+    // }, [titleRef.current]);
+    const barHeight = size.height * 0.55;
+    const titleHeight = size.height * 0.45;
 
     const barTransition = {
         entering: { height: barHeight + toggleDelta },
@@ -37,10 +46,11 @@ const PositionPin = ({ offset, size, content, title, barHeight, contentPosition,
                 {state => (
                     <pre
                         ref={contentRef}
-                        className='position-absolute text-black fs-5 text-start pre-wrap overflow-hidden'
+                        className='position-absolute text-black fs-5 text-start pre-wrap overflow-visible mb-0'
                         style={{
                             bottom: -offset.y + window.innerHeight + barHeight,
                             ...(contentPosition === 0 ? { right: -offset.x + window.innerWidth + size.width / 2 } : { left: offset.x + size.width / 2 + 20 }),
+                            height: titleHeight * 0.8,
                             width: contentWidth,
                             fontFamily: 'nstc',
                             opacity: 0,
@@ -69,8 +79,10 @@ const PositionPin = ({ offset, size, content, title, barHeight, contentPosition,
                         onMouseLeave={() => setToggle(false)}
                     >
                         <pre
-                            className='fs-3 text-black overflow-hidden'
+                            ref={titleRef}
+                            className='fs-3 text-black overflow-visible mb-0'
                             style={{
+                                height: titleHeight,
                                 letterSpacing: 2,
                                 fontFamily: 'nstc',
                                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
@@ -102,9 +114,11 @@ const Page4 = () => {
     const containerRef = useRef(null);
     const [bgImgSize, setBgImgSize] = useState({ width: 0, height: 0 });
     const [bgImgOffset, setBgImgOffset] = useState({ x: 0, y: 0 });
+    const [pinHeight, setPinHeight] = useState(0);
 
     useEffect(() => {
         window.addEventListener("resize", getBackgroundImageDimensions);
+        getBackgroundImageDimensions()
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
         };
@@ -127,10 +141,12 @@ const Page4 = () => {
                 const newWidth = currentHeight * width / height;
                 setBgImgSize({ width: newWidth, height: currentHeight });
                 setBgImgOffset({ x: left + window.scrollX + (currentWidth - newWidth) / 2, y: top });
+                setPinHeight(currentHeight * 0.28);
             } else {
                 const newHeight = currentWidth * height / width;
                 setBgImgSize({ width: currentWidth, height: newHeight });
                 setBgImgOffset({ x: left + window.scrollX, y: top + (currentHeight - newHeight) / 2 });
+                setPinHeight(newHeight * 0.28);
             }
         };
     };
@@ -146,40 +162,36 @@ const Page4 = () => {
 
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
-                        size={{ width: 100, height: 250 }}
+                        size={{ width: 100, height: pinHeight }}
                         content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
                         title={'A\n空襲時代'}
-                        barHeight={150}
                         contentPosition={0}
                         contentWidth={300}
                         goto='areaA'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
-                        size={{ width: 200, height: 250 }}
+                        size={{ width: 200, height: pinHeight }}
                         content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
                         title={'B\n新竹陳的日記本'}
-                        barHeight={150}
                         contentPosition={1}
                         contentWidth={340}
                         goto='areaB'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
-                        size={{ width: 200, height: 250 }}
+                        size={{ width: 200, height: pinHeight }}
                         content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
                         title={'C\n空襲記憶體驗'}
-                        barHeight={150}
                         contentPosition={1}
                         contentWidth={350}
                         goto='areaC'
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
-                        size={{ width: 200, height: 210 }}
+                        size={{ width: 200, height: pinHeight }}
                         content='死亡不是終點，遺忘才是'
                         title={'D\nRe-thinking'}
-                        barHeight={110}
                         contentPosition={1}
                         contentWidth={279}
                         goto='areaD'

@@ -9,6 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Layer1 from "./components/layer1";
 import Page22 from "./components/layer2/page2-2";
+import Page21 from "./components/layer2/page2-1"
 import Area from "./components/layer2/area";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path='/'>
           <Route index element={<Layer1 />} /> 
+          <Route path='detail1' element={<Page21 />} />
           <Route path='detail2' element={<Page22 />} />
           <Route path='areaA' element={<Area where={'A'}/>} />
           <Route path='areaB' element={<Area where={'B'}/>} />
