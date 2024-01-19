@@ -44,3 +44,18 @@ code {
   font-family: "nstc";   /*Can be any text*/
   src: url("../font/NotoSerifTC-Regular.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "shstc-medium";   /*思源宋體*/
+  src: url("../font/SourceHanSerifTC-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "shstc-semibold";   /*思源宋體*/
+  src: url("../font/SourceHanSerifTC-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "shstc-bold";   /*思源宋體*/
+  src: url("../font/SourceHanSerifTC-Bold.otf") format("opentype");
+}

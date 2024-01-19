@@ -105,6 +105,8 @@ const Page3 = () => {
                     size={{ height: bgImgSize.height * 0.426, width: bgImgSize.width * 0.423 }}
                     offset={{ y: bgImgOffset.y + bgImgSize.height * 0.055, x: bgImgOffset.x + bgImgSize.width * 0.523 }}
                 />
+
+                <Link to='/detail3'>
                 <ImageCard
                     imgSrc={img3}
                     imgAlt="黃旺成與踈開"
@@ -112,6 +114,7 @@ const Page3 = () => {
                     size={{ height: bgImgSize.height * 0.375, width: bgImgSize.width * 0.135 }}
                     offset={{ y: bgImgOffset.y + bgImgSize.height * 0.56, x: bgImgOffset.x + bgImgSize.width * 0.525 }}
                 />
+                </Link>
                
             </div>
 

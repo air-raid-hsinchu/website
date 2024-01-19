@@ -10,12 +10,6 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
     const titleRef = useRef(null);
     const contentRef = useRef(null);
     const toggleDelta = 20;
-
-    // useEffect(() => {
-    //     if (titleRef.current === null) return;
-    //     const titleRect = titleRef.current.getBoundingClientRect();
-    //     setBarHeight(size.height - titleRect.height);
-    // }, [titleRef.current]);
     const barHeight = size.height * 0.55;
     const titleHeight = size.height * 0.45;
 
