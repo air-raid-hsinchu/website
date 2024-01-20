@@ -23,7 +23,7 @@ const Page1 = ({ handleClick }) => {
                     backgroundPosition: 'center',
                 }}
             >
-                <div className='d-flex justify-content-center align-items-center h-75 w-75' style={{minWidth: 900}}>
+                <div className='d-flex justify-content-center align-items-center h-75 w-75' style={{ minWidth: 900 }}>
                     <div id="scene">
                         <div data-depth="0.3" id="planes">
                             <img src={planeImg} alt="planes" className="img-fluid" />
@@ -35,7 +35,10 @@ const Page1 = ({ handleClick }) => {
                     </div>
 
                 </div>
+                <div onClick={handleClick} className='scroll-btn' style={{top: window.innerHeight*0.8}}>
+                    <p className='scroll-btn-text'>Scroll to Enter</p>
 
+                </div>
             </div>
         </>
     );
