@@ -84,7 +84,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                 {(isHover && data.date && data.description) && (
                     <div
                         style={{
-                            width: window.innerWidth * 0.2,
+                            width: window.innerWidth * 0.16,
                             height: window.innerHeight * 0.3,
                             position: 'absolute',
                             top: infoPosition.y,
@@ -94,6 +94,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                     >
                         <div
                             style={{
+                                display: 'inline-block',
                                 fontFamily: 'shstc-semibold',
                                 fontSize: 22,
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -106,7 +107,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         <pre
                             style={{
                                 fontFamily: 'shstc-semibold',
-                                fontSize: 20,
+                                fontSize: 18,
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
                                 textWrap: 'wrap',
@@ -179,7 +180,7 @@ const Page23 = () => {
                                 date: '1945年1月17日',
                                 description: '第二十航空隊選定新竹飛行場為轟炸目標，從上午10至11時，對新竹機場投下1,459枚500磅炸彈，459枚500磅燒夷彈。此次空襲造成新竹飛行場附近電話線、高壓電線和水管破裂。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.08, y: bgImgOffset.y + bgImgSize.height * 0.29 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.065, y: bgImgOffset.y + bgImgSize.height * 0.29 }}
                             isHover={hover === 1}
                         />
                     </div>
@@ -208,7 +209,7 @@ const Page23 = () => {
                                 date: '1945年5月15日',
                                 description: 'B24轟炸大隊於中午時刻飛往新竹市，聯合以250磅炸彈轟炸新竹市區。新竹市東區幾乎全燬，市區多處被炸燬破壞，大火持續延燒三日才止息，為最慘重之紀錄。位於市中心的新竹驛房屋頂遭炸毀，當天新竹紡織工場五棟全壞、大日本帝國製糖株式會社新竹製糖廠所的工場六棟全燒燬。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.7, y: bgImgOffset.y + bgImgSize.height * 0.2 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.67, y: bgImgOffset.y + bgImgSize.height * 0.25 }}
                             isHover={hover === 3}
                         />
                     </div>

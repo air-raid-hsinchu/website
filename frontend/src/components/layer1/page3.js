@@ -29,7 +29,7 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
                     className="bg-image mask d-flex justify-content-center align-items-center"
                     style={{ backgroundColor: "rgba(90, 90, 90, 0.5)", height: size.height, width: size.width }}
                 >
-                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{letterSpacing: 5, overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
+                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{ letterSpacing: 5, overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
                 </div>
             </div>
         </div>
@@ -98,24 +98,26 @@ const Page3 = () => {
                         offset={{ y: bgImgOffset.y + bgImgSize.height * 0.062, x: bgImgOffset.x + bgImgSize.width * 0.054 }}
                     />
                 </Link>
-                <ImageCard
-                    imgSrc={img2}
-                    imgAlt="二站新竹空襲地圖"
-                    imgText={"〈二戰新竹空襲地圖〉"}
-                    size={{ height: bgImgSize.height * 0.426, width: bgImgSize.width * 0.423 }}
-                    offset={{ y: bgImgOffset.y + bgImgSize.height * 0.055, x: bgImgOffset.x + bgImgSize.width * 0.523 }}
-                />
-
                 <Link to='/detail3'>
-                <ImageCard
-                    imgSrc={img3}
-                    imgAlt="黃旺成與踈開"
-                    imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"}
-                    size={{ height: bgImgSize.height * 0.375, width: bgImgSize.width * 0.135 }}
-                    offset={{ y: bgImgOffset.y + bgImgSize.height * 0.56, x: bgImgOffset.x + bgImgSize.width * 0.525 }}
-                />
+                    <ImageCard
+                        imgSrc={img2}
+                        imgAlt="二站新竹空襲地圖"
+                        imgText={"〈二戰新竹空襲地圖〉"}
+                        size={{ height: bgImgSize.height * 0.426, width: bgImgSize.width * 0.423 }}
+                        offset={{ y: bgImgOffset.y + bgImgSize.height * 0.055, x: bgImgOffset.x + bgImgSize.width * 0.523 }}
+                    />
                 </Link>
-               
+                <Link to='/detail4'>
+
+                    <ImageCard
+                        imgSrc={img3}
+                        imgAlt="黃旺成與踈開"
+                        imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"}
+                        size={{ height: bgImgSize.height * 0.375, width: bgImgSize.width * 0.135 }}
+                        offset={{ y: bgImgOffset.y + bgImgSize.height * 0.56, x: bgImgOffset.x + bgImgSize.width * 0.525 }}
+                    />
+                </Link>
+
             </div>
 
         </>

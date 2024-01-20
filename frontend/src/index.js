@@ -11,6 +11,7 @@ import Layer1 from "./components/layer1";
 import Page22 from "./components/layer2/page2-2";
 import Page21 from "./components/layer2/page2-1"
 import Page23 from "./components/layer2/page2-3";
+import Page24 from "./components/layer2/page2-4";
 import Area from "./components/layer2/area";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path='detail1' element={<Page21 />} />
           <Route path='detail2' element={<Page22 />} />
           <Route path='detail3' element={<Page23 />} />
+          <Route path='detail4' element={<Page24 />} />
           <Route path='areaA' element={<Area where={'A'}/>} />
           <Route path='areaB' element={<Area where={'B'}/>} />
           <Route path='areaC' element={<Area where={'C'}/>} />
