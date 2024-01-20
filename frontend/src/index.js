@@ -7,6 +7,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import UnderConstruction from "./components/underConstruction";
 import Layer1 from "./components/layer1";
 import Page22 from "./components/layer2/page2-2";
 import Page21 from "./components/layer2/page2-1"
@@ -16,20 +17,22 @@ import Area from "./components/layer2/area";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path='/'>
-          <Route index element={<Layer1 />} /> 
-          <Route path='detail1' element={<Page21 />} />
-          <Route path='detail2' element={<Page22 />} />
-          <Route path='detail3' element={<Page23 />} />
-          <Route path='detail4' element={<Page24 />} />
-          <Route path='areaA' element={<Area where={'A'}/>} />
-          <Route path='areaB' element={<Area where={'B'}/>} />
-          <Route path='areaC' element={<Area where={'C'}/>} />
-          <Route path='areaD' element={<Area where={'D'}/>} />
-        </Route>
-      </Routes>
-    </HashRouter>
+    {(window.innerHeight > window.innerWidth) ? <UnderConstruction /> :
+      <HashRouter>
+        <Routes>
+          <Route path='/'>
+            <Route index element={<Layer1 />} />
+            <Route path='detail1' element={<Page21 />} />
+            <Route path='detail2' element={<Page22 />} />
+            <Route path='detail3' element={<Page23 />} />
+            <Route path='detail4' element={<Page24 />} />
+            <Route path='areaA' element={<Area where={'A'} />} />
+            <Route path='areaB' element={<Area where={'B'} />} />
+            <Route path='areaC' element={<Area where={'C'} />} />
+            <Route path='areaD' element={<Area where={'D'} />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    }
   </React.StrictMode>
 );
