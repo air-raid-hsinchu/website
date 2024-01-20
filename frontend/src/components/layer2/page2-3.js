@@ -46,7 +46,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         style={{
                             marginBottom: 0,
                             overflow: 'visible',
-                            fontSize: 22,
+                            fontSize: '1.5rem',
                             ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black' } : { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' })
                         }}
                     >
@@ -56,7 +56,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         <>
                             {data.subLandmark.map((item, index) => (
                                 <pre key={index} style={{
-                                    fontSize: 15,
+                                    fontSize: '1.2rem',
                                     overflow: 'visible',
                                     marginBottom: 0,
                                     fontFamily: 'shstc-semibold',
@@ -96,7 +96,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                             style={{
                                 display: 'inline-block',
                                 fontFamily: 'shstc-semibold',
-                                fontSize: 22,
+                                fontSize: '1.5rem',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
                                 marginBottom: 10,
@@ -107,7 +107,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         <pre
                             style={{
                                 fontFamily: 'shstc-semibold',
-                                fontSize: 18,
+                                fontSize: '1.2rem',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
                                 textWrap: 'wrap',

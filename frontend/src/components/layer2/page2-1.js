@@ -18,7 +18,8 @@ const Page21 = () => {
                             <i className="fa-solid fa-arrow-left-long" /> Back to List
                         </div>
                     </Link>
-                    <div>{SocialBar}</div>
+                    <SocialBar />
+
                     <div className="container h-100">
                         <div className=" h-25"></div>
                         <div className=" h-75">

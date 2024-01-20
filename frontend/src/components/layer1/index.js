@@ -3,6 +3,7 @@ import '../../assets/styles/layer1.css';
 import { Fade } from '@mui/material';
 import { useState, useEffect, useRef, createRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
 import UnderConstruction from '../underConstruction';
 import Page1 from './page1';
 import Page2 from './page2';
@@ -72,15 +73,20 @@ const Layer1 = () => {
     };
 
 
+
     return (
         <>
             {isMobile ? <UnderConstruction /> :
                 <div>
-                    <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={{ enter: 2000, exit: 2000 }}>
-                        {SocialBar}
-                    </Fade>
 
+                    <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={fadeInOptions.timeout}>
+                        <div>
+                            <SocialBar />
+                        </div>
+
+                    </Fade>
                     <div className='background'>
+
                         <Element id="section1" >
                             <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[0]} className='page-container'>
@@ -124,6 +130,8 @@ const Layer1 = () => {
                                 </div>
                             </Fade>
                         </Element>
+
+
                     </div>
                 </div>
             }

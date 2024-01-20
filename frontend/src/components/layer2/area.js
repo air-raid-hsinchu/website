@@ -44,12 +44,12 @@ const Area = ({ where }) => {
                             <i className="fa-solid fa-arrow-left-long" /> Back to List
                         </div>
                     </Link>
-                    <div>{SocialBar}</div>
-                    <div className="container h-100">
+                    <SocialBar />
+                    <div className="container h-100 w-75">
                         <div className="h-25"></div>
                         <div className="h-50 d-flex flex-column justify-content-center text-black">
                             <h1 style={{ fontFamily: 'nstc-bold' }}>{content[where].title}</h1>
-                            <pre className="overflow-hidden pre-wrap lh-lg fs-5" style={{ fontFamily: 'nstc' }}>{content[where].description}</pre>
+                            <pre className="lh-lg fs-5" style={{wordWrap: 'break-word', fontFamily: 'nstc' }}>{content[where].description}</pre>
                         </div>
 
                     </div>
