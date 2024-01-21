@@ -3,7 +3,7 @@ import classImg from "../../assets/images/2-2class.png";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
-import Player  from "../audioPlayer";
+import Player from "../audioPlayer";
 import pageAudio from "../../assets/audio/奉公防空群の歌＋お知らせ.mp3";
 
 
@@ -17,13 +17,15 @@ const Page22 = () => {
     <div className="background">
       <Fade in={true} timeout={fadeInOptions.timeout}>
         <div className="layer2bg">
+          <SocialBar />
+
           {Player(pageAudio, "<奉公防空群の歌>")}
           <Link state={{ section: 3 }} to="/">
             <div className="homelink">
               <i className="fa-solid fa-arrow-left-long" /> Back to List
             </div>
           </Link>
-          <div>{SocialBar}</div>
+
           <div className="container h-100 mb">
             {/* <div className=" h-25"></div> */}
             <div className=" h-50">

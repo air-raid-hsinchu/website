@@ -3,7 +3,7 @@ import classImg from "../../assets/images/2-4校園授權版.jpeg";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
-import Player  from "../audioPlayer";
+import Player from "../audioPlayer";
 import pageAudio from "../../assets/audio/1938 誉れの軍夫(榮譽的軍夫)1934[雨夜花]重新填詞之日軍宣傳歌曲.mp3";
 
 const fadeInOptions = {
@@ -16,13 +16,13 @@ const Page24 = () => {
         <div className="background">
             <Fade in={true} timeout={fadeInOptions.timeout}>
                 <div className="layer2bg">
+                    <SocialBar />
                     {Player(pageAudio, "<誉れの軍夫音樂>")}
                     <Link state={{ section: 3 }} to="/">
                         <div className="homelink">
                             <i className="fa-solid fa-arrow-left-long" /> Back to List
                         </div>
                     </Link>
-                    <SocialBar />   
                     <div className="container h-100 mb">
                         {/* <div className=" h-25"></div> */}
                         <div className=" h-50">

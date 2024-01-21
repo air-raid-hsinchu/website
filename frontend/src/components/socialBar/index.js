@@ -15,7 +15,7 @@ const SocialBar = () => {
 
     return (
         <>
-            <div className='position-absolute h-100 d-flex flex-column justify-content-center align-items-center' style={{ width: 100, zIndex: 2 }}>
+            <div className='position-fixed h-100 d-flex flex-column justify-content-center align-items-center' style={{ width: 100, zIndex: 2 }}>
                 <a href="https://www.facebook.com/bombingofhsinchiku2024?mibextid=opq0tG">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${radius * 2} ${radius * 2}`} width={radius * 2} height={radius * 2}>
                         <circle cx={radius} cy={radius} r={radius - strokeWidth} fill="none" stroke="black" strokeWidth={strokeWidth} />
