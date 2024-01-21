@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.1cb35800.css",
-    "main.js": "/website/static/js/main.81458d0a.js",
+    "main.css": "/website/static/css/main.c6f83126.css",
+    "main.js": "/website/static/js/main.7aef0cd0.js",
     "static/media/SourceHanSerifTC-Bold.otf": "/website/static/media/SourceHanSerifTC-Bold.a80107ae657ab41c580b.otf",
     "static/media/SourceHanSerifTC-Medium.otf": "/website/static/media/SourceHanSerifTC-Medium.c3b62e9cf26b671d7854.otf",
     "static/media/SourceHanSerifTC-SemiBold.otf": "/website/static/media/SourceHanSerifTC-SemiBold.657597cabadaabf20a22.otf",
@@ -11,9 +11,12 @@
     "static/media/NotoSerifTC-Regular.otf": "/website/static/media/NotoSerifTC-Regular.1ba3e28b7778cd54971c.otf",
     "static/media/NotoSerifTC-Light.otf": "/website/static/media/NotoSerifTC-Light.e3929a74a9356ee0fb8c.otf",
     "static/media/NotoSerifTC-ExtraLight.otf": "/website/static/media/NotoSerifTC-ExtraLight.899cfe8191f947e17325.otf",
+    "static/media/2-2record.png": "/website/static/media/2-2record.e46de69eef9fff00509b.png",
     "static/media/2-3 背景圖.png": "/website/static/media/2-3 背景圖.4576b22335db562d293d.png",
+    "static/media/奉公防空群の歌＋お知らせ.mp3": "/website/static/media/奉公防空群の歌＋お知らせ.a3694716dd62d2bf743d.mp3",
     "static/media/1-1removebg.png": "/website/static/media/1-1removebg.f796f299c5f3e5bb1e74.png",
     "static/media/bg0.png": "/website/static/media/bg0.a52267ff7f6610d67081.png",
+    "static/media/1938 誉れの軍夫(榮譽的軍夫)1934[雨夜花]重新填詞之日軍宣傳歌曲.mp3": "/website/static/media/1938 誉れの軍夫(榮譽的軍夫)1934[雨夜花]重新填詞之日軍宣傳歌曲.adfa50fcb74c19fe4676.mp3",
     "static/media/bg21.png": "/website/static/media/bg21.250b369b0b6892f86e92.png",
     "static/media/2-5bg.png": "/website/static/media/2-5bg.04227e99ae7cf25f3056.png",
     "static/media/1-4.jpg": "/website/static/media/1-4.c575e81b6ff80ff028a3.jpg",
@@ -37,11 +40,11 @@
     "static/media/fa-v4compatibility.ttf": "/website/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/website/index.html",
-    "main.1cb35800.css.map": "/website/static/css/main.1cb35800.css.map",
-    "main.81458d0a.js.map": "/website/static/js/main.81458d0a.js.map"
+    "main.c6f83126.css.map": "/website/static/css/main.c6f83126.css.map",
+    "main.7aef0cd0.js.map": "/website/static/js/main.7aef0cd0.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cb35800.css",
-    "static/js/main.81458d0a.js"
+    "static/css/main.c6f83126.css",
+    "static/js/main.7aef0cd0.js"
   ]
 }
