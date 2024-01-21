@@ -170,6 +170,27 @@ const Page23 = () => {
                             <i className="fa-solid fa-arrow-left-long" /> Back to List
                         </div>
                     </Link>
+                    <div className="d-flex align-items-center justify-content-center position-sticky"
+                        style={{
+                            top: window.innerHeight * 0.1,
+                            left: 0,
+                            width: '100%',
+                        }}
+                    >
+                    <div
+                        style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                            fontFamily: 'shstc-semibold',
+                            color: 'black',
+                            fontSize: '1.5rem',
+                            paddingInline: 23,
+                            letterSpacing: 3,
+                        }}
+                    >
+                        將鼠標移至地點上方看更多
+                    </div>
+                    </div>
+                    
 
                     <div onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)}>
                         <MapPin

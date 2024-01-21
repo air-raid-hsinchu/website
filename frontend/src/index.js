@@ -17,7 +17,6 @@ import Area from "./components/layer2/area";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {(window.innerHeight > window.innerWidth) ? <UnderConstruction /> :
       <HashRouter>
         <Routes>
           <Route path='/'>
@@ -33,6 +32,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           </Route>
         </Routes>
       </HashRouter>
-    }
   </React.StrictMode>
 );
