@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Parallax from 'parallax-js';
 import titleImg from '../../assets/images/1-0-2.png'
-import planeImg from '../../assets/images/1-0-1.png'
+import planeImg from '../../assets/images/1-0-1-ver2.png'
 import backgroundImg from '../../assets/images/bg0.png'
 
 const Page1 = ({ handleClick }) => {

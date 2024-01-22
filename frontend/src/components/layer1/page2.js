@@ -1,5 +1,6 @@
 import backgroundImg from '../../assets/images/1-1removebg.png';
 import newsImg from '../../assets/images/1-1-1.png';
+import newsBgImg from '../../assets/images/1-1 報紙背景 .png'
 import MdfkImg from '../../assets/images/1-1-2.png';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset, rotate }) => {
 
     return (
         <div
-            className="bg-image shadow-lg rounded p-0"
+            className="bg-image shadow-lg rounded p-0 image-card"
             style={{
                 position: 'absolute',
                 height: size.height,
@@ -17,6 +18,7 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset, rotate }) => {
                 left: offset.x,
                 textAlign: 'center',
                 transform: rotate,
+                zIndex: 1,
             }}
         >
             <img
@@ -100,6 +102,20 @@ const Page2 = () => {
                         rotate='rotate(-7deg)'
                     />
                 </Link>
+                <img 
+                    src={newsBgImg}
+                    alt='newsBgImg'
+                    style={{
+                        height: bgImgSize.height * 0.495,
+                        width: bgImgSize.width * 0.213,
+                        top: bgImgOffset.y + bgImgSize.height * 0.182,
+                        left: bgImgOffset.x + bgImgSize.width * 0.326,
+                        position: 'absolute',
+                        transform: 'rotate(-7deg)',
+                        zIndex: 0,
+                    }}
+                />
+
                 <img
                     src={MdfkImg}
                     alt={"mdfk"}
@@ -109,6 +125,7 @@ const Page2 = () => {
                         top: bgImgOffset.y + bgImgSize.height * 0.576,
                         left: bgImgOffset.x + bgImgSize.width * 0.428,
                         position: 'absolute',
+                        zIndex: 2,
                     }}
                 />
             </div>

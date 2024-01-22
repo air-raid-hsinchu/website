@@ -84,12 +84,12 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                 {(isHover && data.date && data.description) && (
                     <div
                         style={{
-                            width: window.innerWidth * 0.16,
+                            width: window.innerWidth * 0.21,
                             height: window.innerHeight * 0.3,
                             position: 'absolute',
-                            top: infoPosition.y,
+                            bottom: -infoPosition.y + window.innerHeight,
                             left: infoPosition.x,
-
+                            scrollbarColor: 'black',
                         }}
                     >
                         <div
@@ -107,6 +107,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         </div>
                         <p
                             style={{
+                                overflowY: 'auto',
                                 fontFamily: 'shstc-semibold',
                                 fontSize: '1.2rem',
                                 width: '100%',
@@ -179,20 +180,20 @@ const Page23 = () => {
                             width: '100%',
                         }}
                     >
-                    <div
-                        style={{
-                            backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                            fontFamily: 'shstc-semibold',
-                            color: 'black',
-                            fontSize: '1.5rem',
-                            paddingInline: 23,
-                            letterSpacing: 3,
-                        }}
-                    >
-                        將鼠標移至地點上方看更多
+                        <div
+                            style={{
+                                backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                                fontFamily: 'shstc-semibold',
+                                color: 'black',
+                                fontSize: '1.5rem',
+                                paddingInline: 23,
+                                letterSpacing: 3,
+                            }}
+                        >
+                            將鼠標移至地點上方看更多
+                        </div>
                     </div>
-                    </div>
-                    
+
 
                     <div onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)}>
                         <MapPin
@@ -203,7 +204,7 @@ const Page23 = () => {
                                 date: '1945年1月17日',
                                 description: '第二十航空隊選定新竹飛行場為轟炸目標，從上午10至11時，對新竹機場投下1,459枚500磅炸彈，459枚500磅燒夷彈。此次空襲造成新竹飛行場附近電話線、高壓電線和水管破裂。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.065, y: bgImgOffset.y + bgImgSize.height * 0.29 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.065, y: bgImgOffset.y + bgImgSize.height * 0.5 }}
                             isHover={hover === 1}
                         />
                     </div>
@@ -217,7 +218,7 @@ const Page23 = () => {
                                 date: '1945年3月17日',
                                 description: '第五航空隊第22大隊第2 、19、 33、 408轟炸中隊21架Ｂ-24以1,000磅炸彈轟炸新竹市區和鐵路設施，市內新興町、黑金町（今新竹市東區西大路和客雅溪之間，和今新竹車站東側）一帶的電信電話線和運輸電線因此被切斷，多處房屋燒毀。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.18, y: bgImgOffset.y + bgImgSize.height * 0.58 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.18, y: bgImgOffset.y + bgImgSize.height * 0.673 }}
                             field={{ width: 108, height: 100, x: bgImgOffset.x + bgImgSize.width * 0.406, y: bgImgOffset.y + bgImgSize.height * 0.62, rot: 'rotate(-35deg)' }}
                             isHover={hover === 2}
                         />
@@ -232,7 +233,7 @@ const Page23 = () => {
                                 date: '1945年5月15日',
                                 description: 'B24轟炸大隊於中午時刻飛往新竹市，聯合以250磅炸彈轟炸新竹市區。新竹市東區幾乎全燬，市區多處被炸燬破壞，大火持續延燒三日才止息，為最慘重之紀錄。位於市中心的新竹驛房屋頂遭炸毀，當天新竹紡織工場五棟全壞、大日本帝國製糖株式會社新竹製糖廠所的工場六棟全燒燬。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.67, y: bgImgOffset.y + bgImgSize.height * 0.25 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.677, y: bgImgOffset.y + bgImgSize.height * 0.48 }}
                             isHover={hover === 3}
                         />
                     </div>
@@ -247,7 +248,7 @@ const Page23 = () => {
                     </div>
                     <div onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)}>
                         <MapPin
-                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.598, y: bgImgOffset.y + bgImgSize.height * 0.61 }}
+                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.598, y: bgImgOffset.y + bgImgSize.height * 0.629 }}
                             size={{ width: 160, height: 50 }}
                             data={{ landmark: '新光紡織公司', subLandmark: ['大日本帝國製糖', '株式會社新竹製糖廠所'] }}
                             isHover={hover === 3}
@@ -262,7 +263,7 @@ const Page23 = () => {
                                 date: '1944年10月14日',
                                 description: '第六燃料廠新竹支廠有34名工廠員工被炸死，並且數座油槽傾倒。\n日本海軍第六燃料廠新竹支廠，為因應日本太平洋戰爭的軍事生產需求而生，用以製造航空燃料的加工劑異辛烷。為日軍重要軍事基地，因此多次遭到轟炸。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.72, y: bgImgOffset.y + bgImgSize.height * 0.3 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.72, y: bgImgOffset.y + bgImgSize.height * 0.56 }}
                             isHover={hover === 4}
                         />
                     </div>
