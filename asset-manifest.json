@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.2aab5f1b.css",
-    "main.js": "/website/static/js/main.dd4431e3.js",
+    "main.css": "/website/static/css/main.e218b4b2.css",
+    "main.js": "/website/static/js/main.6637d761.js",
     "static/media/SourceHanSerifTC-Bold.otf": "/website/static/media/SourceHanSerifTC-Bold.a80107ae657ab41c580b.otf",
     "static/media/SourceHanSerifTC-Medium.otf": "/website/static/media/SourceHanSerifTC-Medium.c3b62e9cf26b671d7854.otf",
     "static/media/SourceHanSerifTC-SemiBold.otf": "/website/static/media/SourceHanSerifTC-SemiBold.657597cabadaabf20a22.otf",
@@ -22,6 +22,7 @@
     "static/media/1-4.jpg": "/website/static/media/1-4.c575e81b6ff80ff028a3.jpg",
     "static/media/2-2class.png": "/website/static/media/2-2class.c0c00694cc266355e9ac.png",
     "static/media/1-3.png": "/website/static/media/1-3.562493a6796dc89a9ab9.png",
+    "static/media/1-0-1-ver2.png": "/website/static/media/1-0-1-ver2.9d5265df1ded471b86d6.png",
     "static/media/1-1-1.png": "/website/static/media/1-1-1.72bb471b2214567d52cd.png",
     "static/media/2-4校園授權版.jpeg": "/website/static/media/2-4校園授權版.4c4ed9e6dc8ac7af44c9.jpeg",
     "static/media/fa-solid-900.ttf": "/website/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
@@ -30,21 +31,21 @@
     "static/media/fa-solid-900.woff2": "/website/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
     "static/media/1-1-2.png": "/website/static/media/1-1-2.deeabfc579ae3a509b71.png",
     "static/media/fa-brands-400.woff2": "/website/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
-    "static/media/1-0-1.png": "/website/static/media/1-0-1.f8e1bc6bbd2d5e97d8d5.png",
     "static/media/layer2_bg.png": "/website/static/media/layer2_bg.5ab1287eeb89cb5d6ff3.png",
     "static/media/1-2.jpg": "/website/static/media/1-2.191e4b1fc55341a8adf7.jpg",
     "static/media/fa-regular-400.ttf": "/website/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/venue_white.png": "/website/static/media/venue_white.0b092ba072c4eb25bb57.png",
+    "static/media/1-1 報紙背景 .png": "/website/static/media/1-1 報紙背景 .d6470cf7a0dfba4e1bdb.png",
     "static/media/1-0-2.png": "/website/static/media/1-0-2.0e346e2b991fe20fdc29.png",
     "static/media/fa-regular-400.woff2": "/website/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
     "static/media/fa-v4compatibility.ttf": "/website/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/website/index.html",
-    "main.2aab5f1b.css.map": "/website/static/css/main.2aab5f1b.css.map",
-    "main.dd4431e3.js.map": "/website/static/js/main.dd4431e3.js.map"
+    "main.e218b4b2.css.map": "/website/static/css/main.e218b4b2.css.map",
+    "main.6637d761.js.map": "/website/static/js/main.6637d761.js.map"
   },
   "entrypoints": [
-    "static/css/main.2aab5f1b.css",
-    "static/js/main.dd4431e3.js"
+    "static/css/main.e218b4b2.css",
+    "static/js/main.6637d761.js"
   ]
 }
