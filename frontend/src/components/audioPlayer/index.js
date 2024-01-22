@@ -1,6 +1,8 @@
 import "../../assets/styles/index.css";
 // import "../../assets/styles/detail.css";
 import "../../assets/styles/audioPlayer.css";
+import "../../assets/scss/audioPlayer.scss";
+
 import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import recordImg from "../../assets/images/2-2record.png";
