@@ -55,6 +55,11 @@
     background-color: rgb(74, 64, 36) !important;
 }
 
+.rhap_main-controls {
+    flex: auto !important;
+}
+
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);

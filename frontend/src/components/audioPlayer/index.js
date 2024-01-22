@@ -33,7 +33,7 @@ const Player = (pageAudio, title) => (
           autoPlay
           defaultCurrentTime=""
           defaultDuration=""
-          //   customControlsSection={[RHAP_UI.MAIN_CONTROLS]}
+          customControlsSection={[RHAP_UI.MAIN_CONTROLS]}
           customProgressBarSection={[RHAP_UI.PROGRESS_BAR]}
           //   customVolumeControls={[]}
           src={pageAudio}
