@@ -99,22 +99,24 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                                 fontSize: '1.5rem',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
+                                paddingInline: 5,
                                 marginBottom: 10,
                             }}
                         >
                             {data.date}
                         </div>
-                        <pre
+                        <p
                             style={{
                                 fontFamily: 'shstc-semibold',
                                 fontSize: '1.2rem',
+                                width: '100%',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
-                                textWrap: 'wrap',
+                                paddingInline: 5,
                             }}
                         >
                             {data.description}
-                        </pre>
+                        </p>
                     </div>
                 )}
             </>
