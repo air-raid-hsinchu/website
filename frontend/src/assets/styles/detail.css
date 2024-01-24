@@ -52,3 +52,9 @@ h2 {
     font-family: 'nstc';
     color: 'black';
 }
+
+#text p {
+    margin-top: 1.5em;
+    font-family: 'nstc';
+    color: 'black';
+}

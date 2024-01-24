@@ -49,7 +49,7 @@ const Area = ({ where }) => {
                         <div className="h-25"></div>
                         <div className="h-50 d-flex flex-column justify-content-center text-black">
                             <h1 style={{ fontFamily: 'nstc-bold' }}>{content[where].title}</h1>
-                            <pre className="lh-lg fs-5" style={{wordWrap: 'break-word', fontFamily: 'nstc' }}>{content[where].description}</pre>
+                            <pre className="lh-lg fs-5" style={{ whiteSpace: 'pre-wrap', fontFamily: 'nstc' }}>{content[where].description}</pre>
                         </div>
 
                     </div>

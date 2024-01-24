@@ -89,13 +89,13 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                             position: 'absolute',
                             bottom: -infoPosition.y + window.innerHeight,
                             left: infoPosition.x,
-                            scrollbarColor: 'black',
+                            color: 'black',                            
                         }}
                     >
                         <div
                             style={{
                                 display: 'inline-block',
-                                fontFamily: 'shstc-semibold',
+                                fontFamily: 'shstc-bold',
                                 fontSize: '1.5rem',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                 transition: 'all 0.5s ease-in-out',
@@ -108,7 +108,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         <p
                             style={{
                                 overflowY: 'auto',
-                                fontFamily: 'shstc-semibold',
+                                fontFamily: 'shstc-bold',
                                 fontSize: '1.2rem',
                                 width: '100%',
                                 backgroundColor: 'rgba(255, 255, 255, 0.5)',
@@ -229,11 +229,11 @@ const Page23 = () => {
                             size={{ width: 189, height: 50 }}
                             data={{
                                 landmark: '遠東巨城購物中心',
-                                subLandmark: ['新竹紡織工場'],
+                                subLandmark: ['大日本帝國製糖', '株式會社新竹製糖廠所'],
                                 date: '1945年5月15日',
                                 description: 'B24轟炸大隊於中午時刻飛往新竹市，聯合以250磅炸彈轟炸新竹市區。新竹市東區幾乎全燬，市區多處被炸燬破壞，大火持續延燒三日才止息，為最慘重之紀錄。位於市中心的新竹驛房屋頂遭炸毀，當天新竹紡織工場五棟全壞、大日本帝國製糖株式會社新竹製糖廠所的工場六棟全燒燬。'
                             }}
-                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.677, y: bgImgOffset.y + bgImgSize.height * 0.48 }}
+                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.685, y: bgImgOffset.y + bgImgSize.height * 0.45 }}
                             isHover={hover === 3}
                         />
                     </div>
@@ -250,7 +250,7 @@ const Page23 = () => {
                         <MapPin
                             offset={{ x: bgImgOffset.x + bgImgSize.width * 0.598, y: bgImgOffset.y + bgImgSize.height * 0.629 }}
                             size={{ width: 160, height: 50 }}
-                            data={{ landmark: '新光紡織公司', subLandmark: ['大日本帝國製糖', '株式會社新竹製糖廠所'] }}
+                            data={{ landmark: '新光紡織公司', subLandmark: ['新竹紡織工場'] }}
                             isHover={hover === 3}
                         />
                     </div>
