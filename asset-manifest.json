@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website/static/css/main.e218b4b2.css",
-    "main.js": "/website/static/js/main.6637d761.js",
+    "main.css": "/website/static/css/main.10fbd017.css",
+    "main.js": "/website/static/js/main.a1ee1adf.js",
     "static/media/SourceHanSerifTC-Bold.otf": "/website/static/media/SourceHanSerifTC-Bold.a80107ae657ab41c580b.otf",
     "static/media/SourceHanSerifTC-Medium.otf": "/website/static/media/SourceHanSerifTC-Medium.c3b62e9cf26b671d7854.otf",
     "static/media/SourceHanSerifTC-SemiBold.otf": "/website/static/media/SourceHanSerifTC-SemiBold.657597cabadaabf20a22.otf",
@@ -41,11 +41,11 @@
     "static/media/fa-v4compatibility.ttf": "/website/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/website/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/website/index.html",
-    "main.e218b4b2.css.map": "/website/static/css/main.e218b4b2.css.map",
-    "main.6637d761.js.map": "/website/static/js/main.6637d761.js.map"
+    "main.10fbd017.css.map": "/website/static/css/main.10fbd017.css.map",
+    "main.a1ee1adf.js.map": "/website/static/js/main.a1ee1adf.js.map"
   },
   "entrypoints": [
-    "static/css/main.e218b4b2.css",
-    "static/js/main.6637d761.js"
+    "static/css/main.10fbd017.css",
+    "static/js/main.a1ee1adf.js"
   ]
 }
