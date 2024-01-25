@@ -26,12 +26,13 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                     }}
                 />
 
-                <div className={
-                    isHover ?
-                        "d-flex flex-column justify-content-center align-items-center text-white"
-                        :
-                        "d-flex flex-column justify-content-center align-items-center text-black"
-                }
+                <div
+                    className={
+                        isHover ?
+                            "d-flex flex-column justify-content-center align-items-start text-white"
+                            :
+                            "d-flex flex-column justify-content-center align-items-start text-black"
+                    }
                     style={{
                         left: offset.x + pinSize + 5,
                         top: offset.y - size.height / 2 + pinSize / 2,
@@ -47,7 +48,10 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                             marginBottom: 0,
                             overflow: 'visible',
                             fontSize: '1.5rem',
-                            ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black' } : { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' })
+                            ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 10 }
+                                :
+                                { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' }),
+
                         }}
                     >
                         {data.landmark}
@@ -56,10 +60,13 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                         <>
                             {data.subLandmark.map((item, index) => (
                                 <pre key={index} style={{
-                                    fontSize: '1.2rem',
+                                    alignSelf: 'center',
+                                    fontSize: '1rem',
                                     overflow: 'visible',
                                     marginBottom: 0,
                                     fontFamily: 'shstc-semibold',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                                    paddingInline: 10
                                 }}>{item}</pre>
                             ))}
                         </>
@@ -89,7 +96,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition }) => {
                             position: 'absolute',
                             bottom: -infoPosition.y + window.innerHeight,
                             left: infoPosition.x,
-                            color: 'black',                            
+                            color: 'black',
                         }}
                     >
                         <div
@@ -260,6 +267,7 @@ const Page23 = () => {
                             size={{ width: 150, height: 50 }}
                             data={{
                                 landmark: ['六燃大煙囪'],
+                                subLandmark: ['日本海軍第六燃料廠\n新竹支廠'],
                                 date: '1944年10月14日',
                                 description: '第六燃料廠新竹支廠有34名工廠員工被炸死，並且數座油槽傾倒。\n日本海軍第六燃料廠新竹支廠，為因應日本太平洋戰爭的軍事生產需求而生，用以製造航空燃料的加工劑異辛烷。為日軍重要軍事基地，因此多次遭到轟炸。'
                             }}
