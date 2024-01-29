@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Parallax from 'parallax-js';
 import titleImg from '../../assets/images/1-0-2.png'
+import mobileTitleImg from '../../assets/images/1-0title.png'
 import planeImg from '../../assets/images/1-0-1-ver2.png'
 import backgroundImg from '../../assets/images/bg0.png'
 
@@ -40,7 +41,7 @@ const Page1 = ({ handleClick }) => {
 
               <div data-depth="0.15" id="main-title">
                 <img
-                  src={titleImg}
+                  src={mobileTitleImg}
                   alt="text"
                   className="img-fluid"
                   onClick={handleClick}
