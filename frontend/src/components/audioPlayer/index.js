@@ -56,11 +56,6 @@ const Player = (pageAudio, title) => (
               st.getPropertyValue("-o-transform") ||
               st.getPropertyValue("transform") ||
               "FAIL";
-            // console.log("Matrix: " + tr);
-            // With rotate(30deg)...
-            // matrix(0.866025, 0.5, -0.5, 0.866025, 0px, 0px)
-            // console.log('Matrix: ' + tr);
-            // rotation matrix - http://en.wikipedia.org/wiki/Rotation_matrix
             console.log(tr);
             if (tr === "none") {
               angle = 0;
@@ -68,9 +63,6 @@ const Player = (pageAudio, title) => (
               var values = tr.split("(")[1].split(")")[0].split(",");
               var a = values[0];
               var b = values[1];
-              // arc sin, convert from radians to degrees, round
-              // next line works for 30deg but not 130deg (returns 50);
-              // var angle = Math.round(Math.asin(sin) * (180/Math.PI));
               var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
             }
             document.getElementById("recordImg").animate(
@@ -110,21 +102,10 @@ const Player = (pageAudio, title) => (
               st.getPropertyValue("-o-transform") ||
               st.getPropertyValue("transform") ||
               "FAIL";
-            // With rotate(30deg)...
-            // matrix(0.866025, 0.5, -0.5, 0.866025, 0px, 0px)
-            // console.log('Matrix: ' + tr);
-            // rotation matrix - http://en.wikipedia.org/wiki/Rotation_matrix
             var values = tr.split("(")[1].split(")")[0].split(",");
             var a = values[0];
             var b = values[1];
-            // arc sin, convert from radians to degrees, round
-            // next line works for 30deg but not 130deg (returns 50);
-            // var angle = Math.round(Math.asin(sin) * (180/Math.PI));
             var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
-            // console.log('Rotate: ' + angle + 'deg');
-            // make record image stop spinning when audio is paused
-            // document.getElementById("recordImg").animate({transform: []},{duration: 0});
-            // disble animate
             document.getElementById("recordImg").animate(
               {
                 transform: [
@@ -137,11 +118,7 @@ const Player = (pageAudio, title) => (
                 iterations: Infinity,
               }
             );
-            // document.getElementById("recordImg").style.transform =
-            //   "rotate(" + angle + "deg)";
           }}
-          // make record image start to spin when audio is playing
-          // other props here
         />
       </div>
     </div>

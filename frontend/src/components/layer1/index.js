@@ -76,7 +76,7 @@ const Layer1 = () => {
 
     return (
         <>
-            {isMobile ? <UnderConstruction /> :
+            {isMobile && false ? <UnderConstruction /> :
                 <div>
 
                     <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={fadeInOptions.timeout}>
