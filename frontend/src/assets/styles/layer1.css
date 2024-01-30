@@ -41,24 +41,25 @@ html {
   z-index: 10;
   padding-inline: 10px;
   cursor: pointer;
-  border-radius: 5px;
-  border-color: #b4a897;
+  border-radius: 20px;
+  border-color: #d9d9d9;
   border-style: solid;
-  border-width: 2px;
-  box-shadow: inset 0 0 0 0 #b4a897;
+  border-width: 5px;
+  box-shadow: inset 0 0 0 0 #d9d9d9;
 }
 
 .scroll-btn:hover,
 .scroll-btn-text:hover {
-  color: #d9d9d9;
-  border-color: #d9d9d9;
+  color: #ffffff;
+  border-color: #ffffff;
   transition: all 0.3s ease;
 }
 
 .scroll-btn-text {
   margin-bottom: 0px;
   display: inline-block;
-  color: #b4a897;
+  letter-spacing: 0.1em;
+  color: #d9d9d9;
   font-weight: 500;
   font-size: 2em;
   text-shadow: 0.1em 0.1em 0.2em black;
@@ -81,8 +82,8 @@ html {
 
 .image-card:hover {
   /* margin-left: 10px; */
-  margin-left: 10px;
-  margin-top: -10px;
+  margin-left: 15px;
+  margin-top: -15px;
 }
 
 #section1,
@@ -108,4 +109,28 @@ html {
   scroll-snap-align: center;
   text-align: center;
   margin-bottom: 2vh
+}
+
+@media (orientation: portrait) {
+  .scroll-btn {
+    position: absolute;
+    z-index: 10;
+    padding-inline: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: #d9d9d9;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: inset 0 0 0 0 #d9d9d9;
+  }
+  .scroll-btn-text {
+    margin-bottom: 0px;
+    display: inline-block;
+    letter-spacing: 0.1em;
+    color: #d9d9d9;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-shadow: 0.1em 0.1em 0.2em black;
+  }
+  
 }

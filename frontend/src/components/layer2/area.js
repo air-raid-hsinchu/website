@@ -14,7 +14,7 @@ const content = {
     },
     B: {
         title: "展間Ｂ  新竹陳的日記本",
-        description: `太平洋戰爭後期，隨著戰爭逐漸失利，臺灣從後方變成了前線。\n來自美軍轟炸機的威脅，徹底改變了人們的生活。\n從黃旺成的日記中，我們可以窺見那個時代的一隅。1945年五月中旬，為了躲避轟炸，黃旺成開始尋找「疏開」的去處。\n在這段期間，面對日復一日的空襲，他被迫舉家搬遷。那段操勞無奈，且性命時時遭受威脅的日子，正是當時臺灣人生活的縮影。\n透過黃旺成的筆，我們可以再次回到那個時代。`,
+        description: `太平洋戰爭後期，隨著戰爭逐漸失利，臺灣從後方變成了前線。\n來自美軍轟炸機的威脅，徹底改變了人們的生活。\n1945年五月中旬，為了躲避轟炸，黃旺成開始尋找「疏開」的去處。\n在這段期間，面對日復一日的空襲，他被迫舉家搬遷。那段操勞無奈，且性命時時遭受威脅的日子，正是當時臺灣人生活的縮影。\n透過黃旺成的筆，我們可以再次回到那個時代。`,
     },
     C: {
         title: "展間C  空襲體驗區",
@@ -49,7 +49,7 @@ const Area = ({ where }) => {
                         <div className="h-25"></div>
                         <div className="h-50 d-flex flex-column justify-content-center text-black">
                             <h1 style={{ fontFamily: 'nstc-bold' }}>{content[where].title}</h1>
-                            <pre className="lh-lg fs-5" style={{wordWrap: 'break-word', fontFamily: 'nstc' }}>{content[where].description}</pre>
+                            <pre className="lh-lg fs-5" style={{ whiteSpace: 'pre-wrap', fontFamily: 'nstc' }}>{content[where].description}</pre>
                         </div>
 
                     </div>

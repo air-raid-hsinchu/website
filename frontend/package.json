@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://air-raid-hsinchu.github.io/website",
+  "homepage": "https://bombing.shinchiku.act.nycu.edu.tw",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "sass": "^1.70.0"
   }
 }

@@ -183,7 +183,7 @@ const Page4 = () => {
                     />
                     <PositionPin
                         offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
-                        size={{ width: 200, height: pinHeight }}
+                        size={{ width: 200, height: pinHeight - 60 }}
                         content='死亡不是終點，遺忘才是'
                         title={'D\nRe-thinking'}
                         contentPosition={1}
