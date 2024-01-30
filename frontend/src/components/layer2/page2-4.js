@@ -36,16 +36,16 @@ const Page24 = () => {
               </Link>
               <SocialBar />
               <div
-                className="container h-100 mb"
+                className="container h-100"
                 style={{ fontFamily: "nstc" }}
-                id="content"
               >
-                <div className=" h-100">
+                <div className=" h-25"></div>
+                <div className="h-75">
                   <div className="col-8 mx-auto">
                     <div
                       className="d-flex flex-column text-black content lh-lg"
                       style={{ fontFamily: "nstc" }}
-                      id="text"
+                    //   id="text"
                     >
                       <h1>黃旺成與疎開</h1>
                       <div className="d-flex justify-content-center">
