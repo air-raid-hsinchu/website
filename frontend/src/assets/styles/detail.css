@@ -71,7 +71,7 @@ h2 {
 }
 
 #text p {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
     font-family: 'nstc';
     color: 'black';
 }
@@ -81,7 +81,13 @@ h2 {
         margin-bottom: 1em;
         font-weight: bold;
         color: black !important;
-        font-size: 1.75rem;
+        font-size: 1.8rem;
+        text-align: center;
+        letter-spacing: 0.1em;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
     }
     .homelink {
         position: absolute;
@@ -108,7 +114,7 @@ h2 {
     }
 
     #text p {
-        margin-top: 1.5em;
+        margin-top: 0.1em;
         font-family: 'nstc';
         color: 'black';
     }
@@ -116,4 +122,8 @@ h2 {
         font-size: 0.75em;
         text-align: center;
     }
+}
+
+caption {
+    text-align: center;
 }
