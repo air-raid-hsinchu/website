@@ -33,6 +33,9 @@ const Page24 = () => {
                 </div>
               </Link>
               <SocialBar />
+              <div className="fluid-container justify-content-center">
+              {Player(pageAudio, "<誉れの軍夫音樂>", false)}
+              </div>
               <div
                 className="container h-100 mb"
                 style={{ fontFamily: "nstc" }}
@@ -47,7 +50,6 @@ const Page24 = () => {
                       id="text"
                     >
                       <h1>黃旺成與疎開</h1>
-                      {Player(pageAudio, "<誉れの軍夫音樂>", false)}
                       <p className="fs-10">
                         「疎開」是日語 そかい（sokai）
                         的漢字，指的是為了避免傷亡而進行的疏散避難。
@@ -95,15 +97,20 @@ const Page24 = () => {
         <div className="background">
           <Fade in={true} timeout={fadeInOptions.timeout}>
             <div className="layer2bg">
-              <SocialBar />
-              {Player(pageAudio, "<誉れの軍夫音樂>")}
               <Link state={{ section: 3 }} to="/">
                 <div className="homelink">
                   <i className="fa-solid fa-arrow-left-long" /> Back to List
                 </div>
               </Link>
+              <SocialBar />
               <div className="container h-100 mb">
                 {/* <div className=" h-25"></div> */}
+                <div className="row">
+                  <div className="col-9"></div>
+                  <div className="col-3">
+                    {Player(pageAudio, "<奉公防空群の歌>")}
+                  </div>
+                </div>
                 <div className=" h-50">
                   <div className="col-8 mx-auto">
                     <div

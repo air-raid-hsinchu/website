@@ -1,22 +1,59 @@
-
-
 @media (orientation: portrait) {
     #audio {
-        position: relative;
+        position: fixed;
+        bottom: 1%;
+        width: 80%;
+        left: 10%;
         /* top: -1%; */
         /* margin: 2vh 2vw; */
         font-family: 'nstc';
         font-size: 1rem;
         z-index: 10;
     }
+    #playerTitle {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    #playerTitle p {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .rhap_container{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .rhap_progress-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        margin-top: 5px !important;
+        height: 5px !important;
+    }
+    .rhap_controls-section{
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .rhap_progress-indicator {
+        width: 10px !important;
+        height: 10px !important;
+        margin-left: -5px !important;
+        top: -3px !important;
+    }
     .rhap_main-controls-button .iconify {
             color: rgb(74, 64, 36) !important;
-            width: 0.75em;
+            width: 0.75 em;
             height: 0.75em;
     }
     .rhap_button-clear {
         margin: 0 !important;
     }
+    /* .rhap_main-controls-button {
+        width: 0.75em !important;
+        height: 0.75em !important;
+    } */
 }
 
 @media (orientation: landscape) {

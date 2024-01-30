@@ -26,21 +26,22 @@ const Page22 = () => {
       {isMobile ? (
         <div className="background">
           <Fade in={true} timeout={fadeInOptions.timeout}>
-            <div className="layer2bg">
+            <div className="layer2">
               <Link state={{ section: 3 }} to="/">
                 <div className="homelink">
                   <i className="fa-solid fa-arrow-left-long" /> Back to List
                 </div>
               </Link>
               <SocialBar />
+              
+              
               <div
                 className="container h-100 mb"
                 style={{ fontFamily: "nstc" }}
                 id="content"
               >
-                
                 {/* <div className=" h-25"></div> */}
-                <div className="h-50">
+                <div className="h-100">
                   <div className="col-8 mx-auto">
                     <div
                       className="d-flex flex-column text-black content"
@@ -48,7 +49,6 @@ const Page22 = () => {
                       id="text"
                     >
                       <h1>空襲底下的<br />人民生活</h1>
-                      {Player(pageAudio, "<奉公防空群の歌>", false)}
                       <h2>- 走空襲：防空洞是第二個家</h2>
                       <p className="fs-10">
                         1944年空襲日漸頻繁的局勢下，總督府命令每戶人家都應自行挖掘防空洞，當空襲警報響起時，應立即前往防空洞避難。後期轟炸頻繁人民幾乎天天進入防空壕躲避空襲，空洞內陰暗潮濕的環境，容易滋生蚊蟲，環境極差。
@@ -65,7 +65,7 @@ const Page22 = () => {
                       </div>
                       <div className="d-flex justify-content-center">
                         <caption>
-                          〈防空頭巾をかぶっての授業〉圖片來源：麹町国民学校=千代田区教育委員会所蔵
+                          〈防空頭巾をかぶっての授業〉<br/>圖片來源：麹町国民学校=千代田区教育委員会所蔵
                         </caption>
                       </div>
 
@@ -82,6 +82,9 @@ const Page22 = () => {
                     </div>
                   </div>
                   <div className="h-25"></div>
+                  <div className="h-25" id="layer2bg">
+                    {Player(pageAudio, "<奉公防空群の歌>", false)}
+                  </div>
                 </div>
               </div>
             </div>

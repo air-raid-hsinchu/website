@@ -17,10 +17,10 @@ const Player = (pageAudio, title, showImg=true) => (
         />
       )}
     </div>
-    <div className="row text-center">
+    <div className="row text-center" id="playerTitle">
       <p>{title}</p>
     </div>
-    <div className="row">
+    <div className="row p-0 m-0">
       <AudioPlayer
         autoPlay
         defaultCurrentTime=""

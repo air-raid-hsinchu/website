@@ -1,12 +1,30 @@
-.layer2bg {
-    background-image: url("../images/layer2_bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
-    position: absolute;
+@media (orientation: portrait) {
+    #layer2bg {
+        background-image: url("../images/layer2Mobilebg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+        position: fixed;
+    }
+    .layer2 {
+        height: 100vh;
+        width: 100vw;
+    }   
 }
+
+@media (orientation: landscape) {
+    .layer2bg {
+        background-image: url("../images/layer2_bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        z-index: 0;
+        position: absolute;
+    }
+}
+
+
 
 .background {
     background-image: url("../images/background.png");
@@ -80,7 +98,7 @@ h2 {
     
     #content {
         /* position: absolute; */
-        margin-top: 20em;
+        margin-top: 10em;
         font-family: 'nstc';
         color: 'black';
     }
@@ -96,6 +114,7 @@ h2 {
         color: 'black';
     }
     caption {
-        font-size: 0.5em;
+        font-size: 0.75em;
+        text-align: center;
     }
 }
