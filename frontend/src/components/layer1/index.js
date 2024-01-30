@@ -80,46 +80,46 @@ const Layer1 = () => {
 
     return (
         <>
-            <div>
+            {isMobile ? (
+                <div>
 
-                <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={fadeInOptions.timeout}>
-                    <div>
-                        <SocialBar />
-                    </div>
+                    <Fade in={(isInViewPort[3] || isInViewPort[4])} timeout={fadeInOptions.timeout}>
+                        <div>
+                            <SocialBar />
+                        </div>
 
-                </Fade>
-                <div className='background'>
+                    </Fade>
+                    <div className='background'>
 
-                    <Element id="section1" >
-                        <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[0]} className='page-container'>
-                                <Page1 handleClick={scrollToSection2} isMobile={isMobile} />
-                            </div>
-                        </Fade>
-                    </Element>
-                    <Element id="section2">
-                        <Fade in={isInViewPort[1]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[1]} className='page-container'>
-                                <Page2 isMobile={isMobile} />
-                            </div>
-                        </Fade>
+                        <Element id="section1" >
+                            <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[0]} className='page-container'>
+                                    <Page1 handleClick={scrollToSection2} isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section2">
+                            <Fade in={isInViewPort[1]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[1]} className='page-container'>
+                                    <Page2 isMobile={isMobile} />
+                                </div>
+                            </Fade>
 
-                    </Element>
-                    <Element id="section3">
-                        <Fade in={isInViewPort[2]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[2]} className='page-container'>
-                                <Page3 isMobile={isMobile} />
-                            </div>
-                        </Fade>
-                    </Element>
-                    <Element id="section4">
-                        <Fade in={isInViewPort[3]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[3]} className='page-container'>
-                                <Page4 isMobile={isMobile} />
-                            </div>
-                        </Fade>
-                    </Element>
-                    {isMobile ? (
+                        </Element>
+                        <Element id="section3">
+                            <Fade in={isInViewPort[2]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[2]} className='page-container'>
+                                    <Page3 isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section4">
+                            <Fade in={isInViewPort[3]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[3]} className='page-container'>
+                                    <Page4 isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
                         <Element id="section5">
                             <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[4]} className="page-container">
@@ -127,26 +127,68 @@ const Layer1 = () => {
                                 </div>
                             </Fade>
                         </Element>
-                    ) : (
-                        <>
-                            <Element id="section5">
-                                <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
-                                    <div ref={elementRefs.current[4]} className='page-container'>
-                                        <Page5 />
-                                    </div>
-                                </Fade>
-                            </Element>
-                            <Element id="section6" className='mb-0'>
-                                <Fade in={isInViewPort[5]} timeout={fadeInOptions.timeout}>
-                                    <div ref={elementRefs.current[5]} className='page-container'>
-                                        <Page6 />
-                                    </div>
-                                </Fade>
-                            </Element>
-                        </>
-                    )}
+
+
+                    </div>
                 </div>
-            </div>
+            ) : (
+                <div>
+
+                    <Fade in={(isInViewPort[3] || isInViewPort[4] || isInViewPort[5])} timeout={fadeInOptions.timeout}>
+                        <div>
+                            <SocialBar />
+                        </div>
+
+                    </Fade>
+                    <div className='background'>
+
+                        <Element id="section1" >
+                            <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[0]} className='page-container'>
+                                    <Page1 handleClick={scrollToSection2} isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section2">
+                            <Fade in={isInViewPort[1]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[1]} className='page-container'>
+                                    <Page2 isMobile={isMobile} />
+                                </div>
+                            </Fade>
+
+                        </Element>
+                        <Element id="section3">
+                            <Fade in={isInViewPort[2]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[2]} className='page-container'>
+                                    <Page3 isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section4">
+                            <Fade in={isInViewPort[3]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[3]} className='page-container'>
+                                    <Page4 isMobile={isMobile} />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section5">
+                            <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[4]} className='page-container'>
+                                    <Page5 />
+                                </div>
+                            </Fade>
+                        </Element>
+                        <Element id="section6" className='mb-0'>
+                            <Fade in={isInViewPort[5]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[5]} className='page-container'>
+                                    <Page6 />
+                                </div>
+                            </Fade>
+                        </Element>
+
+                    </div>
+                </div>
+            )}
         </>
     );
 };

@@ -138,7 +138,7 @@ const Page23 = () => {
     const [bgImgSize, setBgImgSize] = useState({ width: 0, height: 0 });
     const [bgImgOffset, setBgImgOffset] = useState({ x: 0, y: 0 });
     const [hover, setHover] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(null);
 
     useEffect(() => {
         setIsMobile(window.innerHeight > window.innerWidth);
@@ -150,14 +150,14 @@ const Page23 = () => {
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
         };
-    }, []);
+    }, [isMobile]);
 
 
     const getBackgroundImageDimensions = () => {
         const currentWidth = window.innerWidth;
-
+        if (isMobile === null) return;
         const img = new Image();
-        img.src = mapImg;
+        img.src = isMobile ? mobileMapImg : mapImg;
 
         img.onload = () => {
             const width = img.width;
@@ -181,9 +181,8 @@ const Page23 = () => {
                             style={{
                                 height: bgImgSize.height,
                                 width: bgImgSize.width,
-                                ...(isMobile ? {backgroundImage: 'url("../images/2-3\ 地圖原圖.png")'}: {backgroundImage: 'url("../images/2-3\ 背景圖.png")'}),
-
                             }}
+                            onLoad={getBackgroundImageDimensions}
                         >
                             <Link state={{ section: 3 }} to="/">
                                 <div className="homelink">
@@ -192,7 +191,7 @@ const Page23 = () => {
                             </Link>
                             <div className="d-flex align-items-center justify-content-center position-sticky"
                                 style={{
-                                    top: window.innerHeight * 0.1,
+                                    top: window.innerHeight * 0.2,
                                     left: 0,
                                     width: '100%',
                                 }}
@@ -202,7 +201,7 @@ const Page23 = () => {
                                         backgroundColor: 'rgba(255, 255, 255, 0.5)',
                                         fontFamily: 'shstc-semibold',
                                         color: 'black',
-                                        fontSize: '1.5rem',
+                                        fontSize: '1rem',
                                         paddingInline: 23,
                                         letterSpacing: 3,
                                     }}
@@ -214,7 +213,7 @@ const Page23 = () => {
 
                             <div onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.284, y: bgImgOffset.y + bgImgSize.height * 0.365 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.102, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
                                     size={{ width: 100, height: 50 }}
                                     data={{
                                         landmark: '新竹機場',
@@ -227,7 +226,7 @@ const Page23 = () => {
                             </div>
                             <div onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.423, y: bgImgOffset.y + bgImgSize.height * 0.673 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.371, y: bgImgOffset.y + bgImgSize.height * 0.64 }}
                                     size={{ width: 150, height: 50 }}
                                     data={{
                                         landmark: '西大路一帶',
@@ -236,13 +235,13 @@ const Page23 = () => {
                                         description: '第五航空隊第22大隊第2 、19、 33、 408轟炸中隊21架Ｂ-24以1,000磅炸彈轟炸新竹市區和鐵路設施，市內新興町、黑金町（今新竹市東區西大路和客雅溪之間，和今新竹車站東側）一帶的電信電話線和運輸電線因此被切斷，多處房屋燒毀。'
                                     }}
                                     infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.18, y: bgImgOffset.y + bgImgSize.height * 0.673 }}
-                                    field={{ width: 108, height: 100, x: bgImgOffset.x + bgImgSize.width * 0.406, y: bgImgOffset.y + bgImgSize.height * 0.62, rot: 'rotate(-35deg)' }}
+                                    field={{ width: 80, height: 70, x: bgImgOffset.x + bgImgSize.width * 0.33, y: bgImgOffset.y + bgImgSize.height * 0.58, rot: 'rotate(-35deg)' }}
                                     isHover={hover === 2}
                                 />
                             </div>
                             <div onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.525, y: bgImgOffset.y + bgImgSize.height * 0.528 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.592, y: bgImgOffset.y + bgImgSize.height * 0.531 }}
                                     size={{ width: 189, height: 50 }}
                                     data={{
                                         landmark: '遠東巨城購物中心',
@@ -257,7 +256,7 @@ const Page23 = () => {
 
                             <div onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.497, y: bgImgOffset.y + bgImgSize.height * 0.629 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.541, y: bgImgOffset.y + bgImgSize.height * 0.608 }}
                                     size={{ width: 150, height: 50 }}
                                     data={{ landmark: '新竹火車站', subLandmark: ['新竹驛'] }}
                                     isHover={hover === 3}
@@ -265,7 +264,7 @@ const Page23 = () => {
                             </div>
                             <div onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.598, y: bgImgOffset.y + bgImgSize.height * 0.629 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.74, y: bgImgOffset.y + bgImgSize.height * 0.599 }}
                                     size={{ width: 160, height: 50 }}
                                     data={{ landmark: '新光紡織公司', subLandmark: ['新竹紡織工場'] }}
                                     isHover={hover === 3}
@@ -273,7 +272,7 @@ const Page23 = () => {
                             </div>
                             <div onMouseEnter={() => setHover(4)} onMouseLeave={() => setHover(0)}>
                                 <MapPin
-                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.713, y: bgImgOffset.y + bgImgSize.height * 0.618 }}
+                                    offset={{ x: bgImgOffset.x + bgImgSize.width * 0.948, y: bgImgOffset.y + bgImgSize.height * 0.6 }}
                                     size={{ width: 150, height: 50 }}
                                     data={{
                                         landmark: ['六燃大煙囪'],
