@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import Parallax from 'parallax-js';
 import titleImg from '../../assets/images/1-0-2.png'
-import mobileTitleImg from '../../assets/images/1-0title.png'
+import mobileTitleImg from '../../assets/images/mobile_1-0-2.png'
+import mobilePlaneImg from '../../assets/images/mobile_1-0-1.png'
 import planeImg from '../../assets/images/1-0-1-ver2.png'
 import backgroundImg from '../../assets/images/bg0.png'
 
@@ -35,9 +36,9 @@ const Page1 = ({ handleClick }) => {
             style={{ minWidth: window.innerWidth * 0.9}}
           >
             <div id="scene">
-              {/* <div data-depth="0.3" id="planes">
-                <img src={planeImg} alt="planes" className="img-fluid" />
-              </div> */}
+              <div data-depth="0.3" id="planes">
+                <img src={mobilePlaneImg} alt="planes" className="img-fluid" />
+              </div>
 
               <div data-depth="0.15" id="main-title">
                 <img

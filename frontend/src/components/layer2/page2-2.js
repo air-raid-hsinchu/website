@@ -35,17 +35,16 @@ const Page22 = () => {
               </Link>
               <SocialBar />
               <div
-                className="container h-100 mb"
+                className="container h-100"
                 style={{ fontFamily: "nstc" }}
-                id="content"
               >
-                {/* <div className=" h-25"></div> */}
-                <div className="h-100">
+                <div className=" h-25"></div>
+                <div className="h-75">
                   <div className="col-8 mx-auto">
                     <div
-                      className="d-flex flex-column text-black content"
+                      className="d-flex flex-column text-black"
                       style={{ fontFamily: "nstc" }}
-                      id="text"
+                      // id="text"
                     >
                       <h1>空襲底下的<br />人民生活</h1>
                       <h2>- 走空襲：防空洞是第二個家</h2>
@@ -64,7 +63,7 @@ const Page22 = () => {
                       </div>
                       <div className="d-flex justify-content-center">
                         <caption>
-                          〈防空頭巾をかぶっての授業〉<br/>圖片來源：麹町国民学校=千代田区教育委員会所蔵
+                          〈防空頭巾をかぶっての授業〉<br />圖片來源：麹町国民学校=千代田区教育委員会所蔵
                         </caption>
                       </div>
 
@@ -85,7 +84,7 @@ const Page22 = () => {
                   </div>
                 </div>
               </div>
-              <img src={playerBg} alt="空襲底下的人民生活" width={"100%"} id="layer2bg"/>
+              <img src={playerBg} alt="空襲底下的人民生活" width={"100%"} id="layer2bg" />
             </div>
           </Fade>
         </div>
