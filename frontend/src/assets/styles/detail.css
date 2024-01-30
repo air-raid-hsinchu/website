@@ -57,7 +57,6 @@
 }
 
 .map {
-    background-image: url("../images/2-3\ 背景圖.png");
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 1;
