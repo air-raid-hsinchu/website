@@ -90,14 +90,14 @@ const Layer1 = () => {
                         <Element id="section1" >
                             <Fade in={isInViewPort[0]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[0]} className='page-container'>
-                                    <Page1 handleClick={scrollToSection2} />
+                                    <Page1 handleClick={scrollToSection2} isMobile={isMobile}/>
                                 </div>
                             </Fade>
                         </Element>
                         <Element id="section2">
                             <Fade in={isInViewPort[1]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[1]} className='page-container'>
-                                    <Page2 />
+                                    <Page2 isMobile={isMobile}/>
                                 </div>
                             </Fade>
 
@@ -105,14 +105,14 @@ const Layer1 = () => {
                         <Element id="section3">
                             <Fade in={isInViewPort[2]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[2]} className='page-container'>
-                                    <Page3 />
+                                    <Page3 isMobile={isMobile}/>
                                 </div>
                             </Fade>
                         </Element>
                         <Element id="section4">
                             <Fade in={isInViewPort[3]} timeout={fadeInOptions.timeout}>
                                 <div ref={elementRefs.current[3]} className='page-container'>
-                                    <Page4 />
+                                    <Page4 isMobile={isMobile}/>
                                 </div>
                             </Fade>
                         </Element>

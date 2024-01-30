@@ -6,17 +6,12 @@ import mobilePlaneImg from '../../assets/images/mobile_1-0-1.png'
 import planeImg from '../../assets/images/1-0-1-ver2.png'
 import backgroundImg from '../../assets/images/bg0.png'
 
-const Page1 = ({ handleClick }) => {
-  const [isMobile, setIsMobile] = useState(false);
+const Page1 = ({ handleClick, isMobile }) => {
   useEffect(() => {
     let scene = document.getElementById("scene");
     let parallaxInstance = new Parallax(scene, {
       relativeInput: true,
       pointerEvents: true,
-    });
-    setIsMobile(window.innerHeight > window.innerWidth);
-    window.addEventListener("resize", () => {
-      setIsMobile(window.innerHeight > window.innerWidth);
     });
   }, []);
 

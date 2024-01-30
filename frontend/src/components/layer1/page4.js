@@ -104,7 +104,7 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
     );
 }
 
-const Page4 = () => {
+const Page4 = ({ isMobile }) => {
     const containerRef = useRef(null);
     const [bgImgSize, setBgImgSize] = useState({ width: 0, height: 0 });
     const [bgImgOffset, setBgImgOffset] = useState({ x: 0, y: 0 });
@@ -120,6 +120,7 @@ const Page4 = () => {
 
     const getBackgroundImageDimensions = () => {
         const container = containerRef.current;
+        if (!container) return;
         const currentWidth = container.offsetWidth;
         const currentHeight = container.offsetHeight;
         const img = new Image();
@@ -147,52 +148,105 @@ const Page4 = () => {
 
     return (
         <>
-            <div className='h-100 w-100 text-center d-flex flex-column'>
-                <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
-                    參展動線
-                </div>
-                <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
-                    <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
+            {isMobile ? (
+                <>
+                    <div className='h-100 w-100 text-center d-flex flex-column'>
+                        <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
+                            參展動線
+                        </div>
+                        <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
+                            <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
 
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
-                        size={{ width: 100, height: pinHeight }}
-                        content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
-                        title={'A\n空襲時代'}
-                        contentPosition={0}
-                        contentWidth={300}
-                        goto='areaA'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
-                        size={{ width: 200, height: pinHeight }}
-                        content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
-                        title={'B\n新竹陳的日記本'}
-                        contentPosition={1}
-                        contentWidth={340}
-                        goto='areaB'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
-                        size={{ width: 200, height: pinHeight }}
-                        content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
-                        title={'C\n空襲記憶體驗'}
-                        contentPosition={1}
-                        contentWidth={350}
-                        goto='areaC'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
-                        size={{ width: 200, height: pinHeight - 60 }}
-                        content='死亡不是終點，遺忘才是'
-                        title={'D\nRe-thinking'}
-                        contentPosition={1}
-                        contentWidth={279}
-                        goto='areaD'
-                    />
-                </div>
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
+                                size={{ width: 100, height: pinHeight }}
+                                content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
+                                title={'A\n空襲時代'}
+                                contentPosition={0}
+                                contentWidth={300}
+                                goto='areaA'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
+                                title={'B\n新竹陳的日記本'}
+                                contentPosition={1}
+                                contentWidth={340}
+                                goto='areaB'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
+                                title={'C\n空襲記憶體驗'}
+                                contentPosition={1}
+                                contentWidth={350}
+                                goto='areaC'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
+                                size={{ width: 200, height: pinHeight - 60 }}
+                                content='死亡不是終點，遺忘才是'
+                                title={'D\nRe-thinking'}
+                                contentPosition={1}
+                                contentWidth={279}
+                                goto='areaD'
+                            />
+                        </div>
 
-            </div>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div className='h-100 w-100 text-center d-flex flex-column'>
+                        <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
+                            參展動線
+                        </div>
+                        <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
+                            <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
+
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
+                                size={{ width: 100, height: pinHeight }}
+                                content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
+                                title={'A\n空襲時代'}
+                                contentPosition={0}
+                                contentWidth={300}
+                                goto='areaA'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
+                                title={'B\n新竹陳的日記本'}
+                                contentPosition={1}
+                                contentWidth={340}
+                                goto='areaB'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
+                                title={'C\n空襲記憶體驗'}
+                                contentPosition={1}
+                                contentWidth={350}
+                                goto='areaC'
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
+                                size={{ width: 200, height: pinHeight - 60 }}
+                                content='死亡不是終點，遺忘才是'
+                                title={'D\nRe-thinking'}
+                                contentPosition={1}
+                                contentWidth={279}
+                                goto='areaD'
+                            />
+                        </div>
+
+                    </div>
+                </>
+            )}
         </>
 
     );
