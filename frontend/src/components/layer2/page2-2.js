@@ -1,5 +1,6 @@
 import "../../assets/styles/detail.css";
 import classImg from "../../assets/images/2-2class.png";
+import playerBg from "../../assets/images/layer2Mobilebg.png";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
@@ -33,8 +34,6 @@ const Page22 = () => {
                 </div>
               </Link>
               <SocialBar />
-              
-              
               <div
                 className="container h-100 mb"
                 style={{ fontFamily: "nstc" }}
@@ -81,12 +80,12 @@ const Page22 = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="h-25"></div>
-                  <div className="h-25" id="layer2bg">
+                  <div className="h-25">
                     {Player(pageAudio, "<奉公防空群の歌>", false)}
                   </div>
                 </div>
               </div>
+              <img src={playerBg} alt="空襲底下的人民生活" width={"100%"} id="layer2bg"/>
             </div>
           </Fade>
         </div>
