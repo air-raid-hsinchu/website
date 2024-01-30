@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "../../assets/styles/detail.css";
 import classImg from "../../assets/images/2-4校園授權版.jpeg";
+import playerBg from "../../assets/images/layer2Mobilebg.png";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
@@ -26,23 +27,19 @@ const Page24 = () => {
       {isMobile ? (
         <div className="background">
           <Fade in={true} timeout={fadeInOptions.timeout}>
-            <div className="layer2bg">
+            <div className="layer2">
               <Link state={{ section: 3 }} to="/">
                 <div className="homelink">
                   <i className="fa-solid fa-arrow-left-long" /> Back to List
                 </div>
               </Link>
               <SocialBar />
-              <div className="fluid-container justify-content-center">
-              {Player(pageAudio, "<誉れの軍夫音樂>", false)}
-              </div>
               <div
                 className="container h-100 mb"
                 style={{ fontFamily: "nstc" }}
                 id="content"
               >
-                {/* <div className=" h-25"></div> */}
-                <div className=" h-50">
+                <div className=" h-100">
                   <div className="col-8 mx-auto">
                     <div
                       className="d-flex flex-column text-black content lh-lg"
@@ -84,12 +81,14 @@ const Page24 = () => {
                         1945年，隨著日軍的潰敗，臺灣也成為了戰場。為了躲避轟炸，黃旺成決定開始「疎開」。
                         而這段經歷，被完整記錄在日記中。
                       </p>
-                      {/* insert image here with caption below */}
                     </div>
                   </div>
-                  <div className="h-25"></div>
+                  <div className="h-25">
+                    {Player(pageAudio, "<誉れの軍夫音樂>", false)}
+                  </div>
                 </div>
               </div>
+              <img src={playerBg} alt="空襲底下的人民生活" width={"100%"} id="layer2bg"/>
             </div>
           </Fade>
         </div>
