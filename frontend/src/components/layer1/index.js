@@ -119,22 +119,32 @@ const Layer1 = () => {
                             </div>
                         </Fade>
                     </Element>
-                    <Element id="section5">
-                        <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[4]} className='page-container'>
-                                <Page5 />
-                            </div>
-                        </Fade>
-                    </Element>
-                    <Element id="section6" className='mb-0'>
-                        <Fade in={isInViewPort[5]} timeout={fadeInOptions.timeout}>
-                            <div ref={elementRefs.current[5]} className='page-container'>
-                                <Page6 />
-                            </div>
-                        </Fade>
-                    </Element>
-
-
+                    {isMobile ? (
+                        <Element id="section5">
+                            <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
+                                <div ref={elementRefs.current[4]} className="page-container">
+                                    <Page56 />
+                                </div>
+                            </Fade>
+                        </Element>
+                    ) : (
+                        <>
+                            <Element id="section5">
+                                <Fade in={isInViewPort[4]} timeout={fadeInOptions.timeout}>
+                                    <div ref={elementRefs.current[4]} className='page-container'>
+                                        <Page5 />
+                                    </div>
+                                </Fade>
+                            </Element>
+                            <Element id="section6" className='mb-0'>
+                                <Fade in={isInViewPort[5]} timeout={fadeInOptions.timeout}>
+                                    <div ref={elementRefs.current[5]} className='page-container'>
+                                        <Page6 />
+                                    </div>
+                                </Fade>
+                            </Element>
+                        </>
+                    )}
                 </div>
             </div>
         </>
