@@ -9,6 +9,8 @@ import Player from "../audioPlayer";
 import pageAudio from "../../assets/audio/1938 誉れの軍夫(榮譽的軍夫)1934[雨夜花]重新填詞之日軍宣傳歌曲.mp3";
 import Img1 from "../../assets/images/2-4 圖一.png";
 import Img2 from "../../assets/images/2-4 圖二.jpeg";
+import Img3 from "../../assets/images/2-4 圖三.png";
+
 const fadeInOptions = {
   timeout: { enter: 1000, exit: 0 },
 };
@@ -35,17 +37,14 @@ const Page24 = () => {
                 </div>
               </Link>
               <SocialBar />
-              <div
-                className="container h-100"
-                style={{ fontFamily: "nstc" }}
-              >
+              <div className="container h-100" style={{ fontFamily: "nstc" }}>
                 <div className=" h-25"></div>
                 <div className="h-75">
                   <div className="col-8 mx-auto">
                     <div
                       className="d-flex flex-column text-black content lh-lg"
                       style={{ fontFamily: "nstc" }}
-                    //   id="text"
+                      //   id="text"
                     >
                       <h1>黃旺成與疎開</h1>
                       <div className="d-flex justify-content-center">
@@ -117,6 +116,20 @@ const Page24 = () => {
                       <p className="fs-10">
                         除了一生的經歷外，黃旺成最為人所知的是他詳實的日記，他書寫日記數十年，幾乎從未間斷。
                       </p>
+                      <div className="d-flex justify-content-center">
+                        <img src={Img3} alt="黃旺成與疎開" width={"100%"} />
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <caption>
+                          《1945年黃旺成日記》示意圖，此為1945年5月15日新竹大空襲。
+                          <br />
+                          五月十五日 舊曆四月四日 火曜 天氣晴 溫度八二 ◎
+                          新竹市無差別爆擊
+                          空警早朝1.半…10:10分…11:10分自11.半頃至13時過，敵機共七、八波，聲似由壕上過，炸烈振動兼有，連發高射砲聲，狀極悽慘，為前末有。14時頃解除，出看昔姪、錐觀，逢國川、蔡心匏、林李灶等，到處家屋倒壞、劫火猶燒，唯西門以西一帶無羔，15.半頃歸。圖（黃繼圖，黃旺成之子）出看法院，一壕死
+                          18人，夜帶被爆死彭前事人員之子回泊，水電皆無。  <br />
+                          ◎ B24二人〔丰〕早朝侵台北市，爆90主侵新竹，一部台中。（內容來源：中研院臺史所）
+                        </caption>
+                      </div>
                       <p className="fs-10">
                         1945年，隨著日軍的潰敗，臺灣也成為了戰場。為了躲避轟炸，黃旺成決定開始「疏開」。
                       </p>
@@ -238,6 +251,20 @@ const Page24 = () => {
                       <p className="fs-5">
                         除了一生的經歷外，黃旺成最為人所知的是他詳實的日記，他書寫日記數十年，幾乎從未間斷。
                       </p>
+                      <div className="d-flex justify-content-center">
+                        <img src={Img3} alt="黃旺成與疎開" width={"100%"} />
+                      </div>
+                      <div className="d-flex justify-content-center">
+                        <caption>
+                          《1945年黃旺成日記》示意圖，此為1945年5月15日新竹大空襲。
+                          <br />
+                          五月十五日 舊曆四月四日 火曜 天氣晴 溫度八二 ◎
+                          新竹市無差別爆擊
+                          空警早朝1.半…10:10分…11:10分自11.半頃至13時過，敵機共七、八波，聲似由壕上過，炸烈振動兼有，連發高射砲聲，狀極悽慘，為前末有。14時頃解除，出看昔姪、錐觀，逢國川、蔡心匏、林李灶等，到處家屋倒壞、劫火猶燒，唯西門以西一帶無羔，15.半頃歸。圖（黃繼圖，黃旺成之子）出看法院，一壕死
+                          18人，夜帶被爆死彭前事人員之子回泊，水電皆無。  <br />
+                          ◎ B24二人〔丰〕早朝侵台北市，爆90主侵新竹，一部台中。（內容來源：中研院臺史所）
+                        </caption>
+                      </div>
                       <p className="fs-5">
                         1945年，隨著日軍的潰敗，臺灣也成為了戰場。為了躲避轟炸，黃旺成決定開始「疏開」。
                       </p>
