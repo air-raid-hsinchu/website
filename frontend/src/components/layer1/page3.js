@@ -7,8 +7,7 @@ import mobileBackgroundImg from "../../assets/images/mobile_1-2.png"
 import backgroundImg from "../../assets/images/bg21.png" // 背景圖片
 import { useRef, useState, useEffect } from "react";
 
-const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
-
+const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset, fs }) => {
     return (
         <div
             className="bg-image shadow-lg rounded p-0 image-card"
@@ -31,7 +30,7 @@ const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset }) => {
                     className="bg-image mask d-flex justify-content-center align-items-center"
                     style={{ backgroundColor: "rgba(90, 90, 90, 0.5)", height: size.height, width: size.width }}
                 >
-                    <pre className="text-white mb-1 fs-2 fw-bolder lh-sm" style={{ letterSpacing: 5, overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
+                    <pre className={`text-white mb-1 fw-bolder lh-sm fs-${fs}`} style={{ letterSpacing: 5, overflow: 'hidden', fontFamily: 'nstc' }}>{imgText}</pre>
                 </div>
             </div>
         </div>
@@ -102,6 +101,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"}
                                 size={{ height: bgImgSize.height * 0.298, width: bgImgSize.width * 0.36 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.2, x: bgImgOffset.x + bgImgSize.width * 0.111 }}
+                                fs={5}
                             />
                         </Link>
                         <Link to='/detail3'>
@@ -111,6 +111,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"〈二戰新竹空襲地圖〉"}
                                 size={{ height: bgImgSize.height * 0.251, width: bgImgSize.width * 0.789 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.623, x: bgImgOffset.x + bgImgSize.width * 0.108 }}
+                                fs={5}
                             />
                         </Link>
                         <Link to='/detail4'>
@@ -121,6 +122,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"}
                                 size={{ height: bgImgSize.height * 0.298, width: bgImgSize.width * 0.336 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.2, x: bgImgOffset.x + bgImgSize.width * 0.557 }}
+                                fs={5}
                             />
                         </Link>
 
@@ -147,6 +149,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"}
                                 size={{ height: bgImgSize.height * 0.876, width: bgImgSize.width * 0.353 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.062, x: bgImgOffset.x + bgImgSize.width * 0.054 }}
+                                fs={2}
                             />
                         </Link>
                         <Link to='/detail3'>
@@ -156,6 +159,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"〈二戰新竹空襲地圖〉"}
                                 size={{ height: bgImgSize.height * 0.426, width: bgImgSize.width * 0.423 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.055, x: bgImgOffset.x + bgImgSize.width * 0.523 }}
+                                fs={2}
                             />
                         </Link>
                         <Link to='/detail4'>
@@ -166,6 +170,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"}
                                 size={{ height: bgImgSize.height * 0.375, width: bgImgSize.width * 0.135 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.56, x: bgImgOffset.x + bgImgSize.width * 0.525 }}
+                                fs={2}
                             />
                         </Link>
 
