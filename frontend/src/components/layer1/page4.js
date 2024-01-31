@@ -4,14 +4,14 @@ import { Transition } from 'react-transition-group';
 
 
 
-const PositionPin = ({ offset, size, content, title, contentPosition, contentWidth, goto }) => {
-    const [toggle, setToggle] = useState(false);
+const PositionPin = ({ offset, size, content, title, contentPosition, contentWidth, goto, fontSize, isMobile = false, rotateTitle = false, zIndex, pop = false }) => {
+    const [toggle, setToggle] = useState(pop);
     const containerRef = useRef(null);
     const titleRef = useRef(null);
     const contentRef = useRef(null);
-    const toggleDelta = 20;
-    const barHeight = size.height * 0.55;
-    const titleHeight = size.height * 0.45;
+    const toggleDelta = isMobile ? 40 : 20;
+    const barHeight = isMobile ? size.height * 0.2 : size.height * 0.55;
+    const titleHeight = isMobile ? size.height * 0.8 : size.height * 0.45;
 
     const barTransition = {
         entering: { height: barHeight + toggleDelta },
@@ -34,29 +34,45 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
         exited: { opacity: 0, bottom: -offset.y + window.innerHeight + barHeight },
     }
 
+    const handleMouseEnter = () => {
+        if (isMobile) return;
+        setToggle(true);
+    }
+
+    const handleMouseLeave = () => {
+        if (isMobile) return;
+        setToggle(false);
+    }
+
     return (
         <>
-            <Transition nodeRef={contentRef} in={toggle} timeout={500}>
+            <Transition nodeRef={contentRef} in={isMobile ? pop : toggle} timeout={500}>
                 {state => (
                     <pre
                         ref={contentRef}
-                        className='position-absolute text-black fs-5 text-start pre-wrap overflow-visible mb-0'
+                        className='position-absolute text-black text-start pre-wrap overflow-visible mb-0'
                         style={{
                             bottom: -offset.y + window.innerHeight + barHeight,
-                            ...(contentPosition === 0 ? { right: -offset.x + window.innerWidth + size.width / 2 } : { left: offset.x + size.width / 2 + 20 }),
-                            height: titleHeight * 0.8,
-                            width: contentWidth,
+                            ...(isMobile ?
+                                { ...(contentPosition === 0 ? { right: -offset.x + window.innerWidth + 10 } : { left: offset.x + 10 }) }
+                                :
+                                { ...(contentPosition === 0 ? { right: -offset.x + window.innerWidth + size.width / 2 } : { left: offset.x + size.width / 2 + 20 }) }),
+                            ...(isMobile && { writingMode: 'vertical-rl' }),
+                            ...(isMobile ? { height: titleHeight } : { width: contentWidth, height: titleHeight * 0.8 }),
                             fontFamily: 'nstc',
+                            fontSize: fontSize - 3,
                             opacity: 0,
                             transition: 'all 0.5s ease-in-out',
-                            ...contentTransition[state]
+                            ...contentTransition[state],
+                            whiteSpace: 'pre-wrap',
+                            zIndex: zIndex,
                         }}
                     >
                         {content}
                     </pre>
                 )}
             </Transition>
-            <Transition nodeRef={containerRef} in={toggle} timeout={500}>
+            <Transition nodeRef={containerRef} in={isMobile ? pop : toggle} timeout={500}>
                 {state => (
                     <a href={`#${goto}`}
                         ref={containerRef}
@@ -68,18 +84,36 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
                             height: size.height,
                             transition: 'height 0.5s ease-in-out',
                             ...containerTransition[state],
+                            zIndex: zIndex,
                         }}
-                        onMouseEnter={() => setToggle(true)}
-                        onMouseLeave={() => setToggle(false)}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
                     >
+                        {rotateTitle && (
+                            <pre
+                                ref={titleRef}
+                                className='text-black overflow-visible mb-0'
+                                style={{
+                                    fontSize: fontSize,
+                                    fontFamily: 'nstc',
+                                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                                    paddingLeft: 8,
+                                }}
+                            >
+                                D
+                            </pre>
+                        )}
                         <pre
                             ref={titleRef}
-                            className='fs-3 text-black overflow-visible mb-0'
+                            className='text-black overflow-visible mb-0'
                             style={{
-                                height: titleHeight,
+                                fontSize: fontSize,
                                 letterSpacing: 2,
                                 fontFamily: 'nstc',
-                                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+                                textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+                                height: titleHeight,
+                                ...(isMobile && { lineHeight: 1 }),
+                                ...(rotateTitle && { transform: 'rotate(90deg)', alignSelf: 'center', lineHeight: `${titleHeight - 30}px` }),
                             }}
                         >
                             {title}
@@ -104,22 +138,35 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
     );
 }
 
-const Page4 = () => {
+const Page4 = ({ isMobile }) => {
     const containerRef = useRef(null);
     const [bgImgSize, setBgImgSize] = useState({ width: 0, height: 0 });
     const [bgImgOffset, setBgImgOffset] = useState({ x: 0, y: 0 });
     const [pinHeight, setPinHeight] = useState(0);
+    const [counter, setCounter] = useState(0);
+    const [counterId, setCounterId] = useState(null);
 
     useEffect(() => {
         window.addEventListener("resize", getBackgroundImageDimensions);
         getBackgroundImageDimensions()
+        if (isMobile) {
+            let counterId = setInterval(() => {
+                setCounter(counter => counter + 1);
+                console.log(counter);
+            }, 3000);
+            setCounterId(counterId);
+        }
+
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
+            if (counterId) clearInterval(counterId);
+
         };
-    }, []);
+    }, [isMobile]);
 
     const getBackgroundImageDimensions = () => {
         const container = containerRef.current;
+        if (!container) return;
         const currentWidth = container.offsetWidth;
         const currentHeight = container.offsetHeight;
         const img = new Image();
@@ -147,52 +194,126 @@ const Page4 = () => {
 
     return (
         <>
-            <div className='h-100 w-100 text-center d-flex flex-column'>
-                <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
-                    參展動線
-                </div>
-                <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
-                    <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
+            {isMobile ? (
+                <>
+                    <div className='h-100 w-100 text-center d-flex flex-column'>
+                        <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
+                            參展動線
+                        </div>
+                        <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
+                            <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
 
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
-                        size={{ width: 100, height: pinHeight }}
-                        content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
-                        title={'A\n空襲時代'}
-                        contentPosition={0}
-                        contentWidth={300}
-                        goto='areaA'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
-                        size={{ width: 200, height: pinHeight }}
-                        content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
-                        title={'B\n新竹陳的日記本'}
-                        contentPosition={1}
-                        contentWidth={340}
-                        goto='areaB'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
-                        size={{ width: 200, height: pinHeight }}
-                        content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
-                        title={'C\n空襲記憶體驗'}
-                        contentPosition={1}
-                        contentWidth={350}
-                        goto='areaC'
-                    />
-                    <PositionPin
-                        offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
-                        size={{ width: 200, height: pinHeight - 60 }}
-                        content='死亡不是終點，遺忘才是'
-                        title={'D\nRe-thinking'}
-                        contentPosition={1}
-                        contentWidth={279}
-                        goto='areaD'
-                    />
-                </div>
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
+                                size={{ width: 100, height: 120 }}
+                                content={'步入時光迴廊，回到1945年— 新竹州的天空'}
+                                title={'A\n空\n襲\n時\n代'}
+                                contentPosition={0}
+                                contentWidth={300}
+                                goto='areaA'
+                                fontSize={15}
+                                isMobile={true}
+                                zIndex={2}
+                                pop={counter % 4 === 0}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
+                                size={{ width: 100, height: 170 }}
+                                content={'翻開泛黃的扉頁、按下老舊的播放鍵，與黃旺成一同經歷流離的那3個月'}
+                                title={'B\n新\n竹\n陳\n的\n日\n記\n本'}
+                                contentPosition={0}
+                                contentWidth={340}
+                                goto='areaB'
+                                fontSize={15}
+                                isMobile={true}
+                                zIndex={0}
+                                pop={counter % 4 === 1}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
+                                size={{ width: 100, height: 160 }}
+                                content={'只要閉上眼睛，在黑暗之中，那空襲時代的轟鳴仍在耳邊回響'}
+                                title={'C\n空\n襲\n記\n憶\n體\n驗'}
+                                contentPosition={1}
+                                contentWidth={350}
+                                goto='areaC'
+                                fontSize={15}
+                                isMobile={true}
+                                zIndex={1}
+                                pop={counter % 4 === 2}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.45, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
+                                size={{ width: 100, height: 170 }}
+                                content='死亡不是終點，遺忘才是'
+                                title={'Re-thinking'}
+                                contentPosition={0}
+                                contentWidth={279}
+                                goto='areaD'
+                                fontSize={15}
+                                isMobile={true}
+                                rotateTitle={true}
+                                zIndex={1}
+                                pop={counter % 4 === 3}
+                            />
+                        </div>
 
-            </div>
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div className='h-100 w-100 text-center d-flex flex-column'>
+                        <div className='text-black fs-1 d-flex align-items-end justify-content-center fw-bold ' style={{ height: '14%', fontFamily: 'nstc' }}>
+                            參展動線
+                        </div>
+                        <div className='w-100 d-flex align-items-center  justify-content-center' style={{ height: '86%' }}>
+                            <img onLoad={getBackgroundImageDimensions} ref={containerRef} src={mapImg} style={{ maxHeight: '120%', maxWidth: '100%' }} />
+
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.305, y: bgImgOffset.y + bgImgSize.height * 0.515 }}
+                                size={{ width: 100, height: pinHeight }}
+                                content={'步入時光迴廊，回到1945年\n— 新竹州的天空'}
+                                title={'A\n空襲時代'}
+                                contentPosition={0}
+                                contentWidth={300}
+                                goto='areaA'
+                                fontSize={20}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.536, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'翻開泛黃的扉頁、按下老舊的播放鍵\n，與黃旺成一同經歷流離的那3個月'}
+                                title={'B\n新竹陳的日記本'}
+                                contentPosition={1}
+                                contentWidth={340}
+                                goto='areaB'
+                                fontSize={20}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.729, y: bgImgOffset.y + bgImgSize.height * 0.503 }}
+                                size={{ width: 200, height: pinHeight }}
+                                content={'只要閉上眼睛，在黑暗之中，那空\n襲時代的轟鳴仍在耳邊回響'}
+                                title={'C\n空襲記憶體驗'}
+                                contentPosition={1}
+                                contentWidth={350}
+                                goto='areaC'
+                                fontSize={20}
+                            />
+                            <PositionPin
+                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.7 }}
+                                size={{ width: 200, height: pinHeight - 60 }}
+                                content='死亡不是終點，遺忘才是'
+                                title={'D\nRe-thinking'}
+                                contentPosition={1}
+                                contentWidth={279}
+                                goto='areaD'
+                                fontSize={20}
+                            />
+                        </div>
+
+                    </div>
+                </>
+            )}
         </>
 
     );
