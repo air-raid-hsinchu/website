@@ -5,10 +5,12 @@
         height: 12.5%;
         position: fixed;
     }
+
     .layer2 {
         height: 100vh;
         width: 100vw;
     }
+
     .layer2bg {
         background-image: url("../images/layer2_bg.png");
         background-repeat: no-repeat;
@@ -56,11 +58,24 @@
     z-index: 10;
 }
 
-.map {
-    background-image: url("../images/2-3\ 背景圖.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    z-index: 1;
+@media (orientation: landscape) {
+    .map {
+        background-image: url("../images/2-3\ 背景圖.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+    }
+}
+
+@media (orientation: portrait) {
+    .map {
+        background-image: url("../images/2-3\ 地圖原圖.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+    }
 }
 
 h1 {
@@ -95,10 +110,12 @@ h2 {
         letter-spacing: 0.1em;
         display: inline-block !important;
     }
+
     h2 {
         font-size: 1.2rem;
         font-weight: 600;
     }
+
     .homelink {
         position: absolute;
         top: 5%;
@@ -110,13 +127,14 @@ h2 {
         text-shadow: 0.1em 0.1em 0.2em black;
         z-index: 10;
     }
-    
+
     #content {
         /* position: absolute; */
         margin-top: 10em;
         font-family: 'nstc';
         color: 'black';
     }
+
     #text {
         margin-top: 5em;
         font-family: 'nstc';
@@ -128,6 +146,7 @@ h2 {
         font-family: 'nstc';
         color: 'black';
     }
+
     caption {
         font-size: 0.75em;
         text-align: center;
