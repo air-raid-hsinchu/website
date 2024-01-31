@@ -38,7 +38,7 @@ const Page24 = () => {
               </Link>
               <SocialBar />
               <div className="container h-100" style={{ fontFamily: "nstc" }}>
-                <div className=" h-25"></div>
+                <div className="h-15"></div>
                 <div className="h-75">
                   <div className="col-8 mx-auto">
                     <div

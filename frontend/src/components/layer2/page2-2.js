@@ -39,7 +39,7 @@ const Page22 = () => {
                 className="container h-100"
                 style={{ fontFamily: "nstc" }}
               >
-                <div className="h-25"></div>
+                <div className="h-15"></div>
                 <div className="h-75">
                   <div className="col-9 mx-auto">
                     <div
