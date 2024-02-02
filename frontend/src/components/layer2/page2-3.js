@@ -358,7 +358,7 @@ const Page23 = () => {
                 <>
                     <Fade in={true} timeout={fadeInOptions.timeout}>
                         <div className='background h-100 w-100 d-flex flex-column align-items-center justify-content-start'>
-                            <div className="h-100">
+                            <div className="h-75">
                                 <div
                                     ref={mapRef}
                                     style={{
@@ -502,9 +502,9 @@ const Page23 = () => {
 
                                 </div>
                             </div>
-                            <div className="h-25 d-flex justify-content-center">
+                            <div className="h-15 d-flex justify-content-center">
                                 {hover !== 0 && (
-                                    <div className="text-black w-50 h-75">
+                                    <div className="text-black w-75 h-15">
                                         <div
                                             style={{
                                                 display: 'inline-block',
