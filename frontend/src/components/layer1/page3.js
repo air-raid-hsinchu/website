@@ -49,7 +49,7 @@ const Page3 = ({ isMobile }) => {
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
         };
-    }, [isMobile]);
+    }, [isMobile, containerRef.current]);
 
     const getBackgroundImageDimensions = () => {
         const container = containerRef.current;

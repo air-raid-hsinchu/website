@@ -58,7 +58,7 @@
     z-index: 10;
 }
 
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
     .map {
         background-image: url("../images/2-3\ 背景圖.png");
         background-position: center;
@@ -76,7 +76,7 @@
         background-size: contain;
         z-index: 1;
     }
-}
+} */
 
 h1 {
     margin-bottom: 1em;
