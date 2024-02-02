@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import Parallax from 'parallax-js';
-import titleImg from '../../assets/images/1-0-2.png'
-import mobileTitleImg from '../../assets/images/mobile_1-0-2.png'
-import mobilePlaneImg from '../../assets/images/mobile_1-0-1.png'
-import planeImg from '../../assets/images/1-0-1-ver2.png'
-import backgroundImg from '../../assets/images/bg0.png'
+import titleImg from '../../assets/images/1-0-2.webp'
+import mobileTitleImg from '../../assets/images/mobile_1-0-2.webp'
+import mobilePlaneImg from '../../assets/images/mobile_1-0-1.webp'
+import planeImg from '../../assets/images/1-0-1-ver2.webp'
+import backgroundImg from '../../assets/images/bg0.webp'
 
 const Page1 = ({ handleClick, isMobile }) => {
   useEffect(() => {

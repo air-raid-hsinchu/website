@@ -12,7 +12,7 @@
     }
 
     .layer2bg {
-        background-image: url("../images/layer2_bg.png");
+        background-image: url("../images/layer2_bg.webp");
         background-repeat: no-repeat;
         background-size: cover;
         height: 50vh;
@@ -24,7 +24,7 @@
 
 @media (orientation: landscape) {
     .layer2bg {
-        background-image: url("../images/layer2_bg.png");
+        background-image: url("../images/layer2_bg.webp");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
@@ -58,25 +58,6 @@
     z-index: 10;
 }
 
-/* @media (orientation: landscape) {
-    .map {
-        background-image: url("../images/2-3\ 背景圖.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 1;
-    }
-}
-
-@media (orientation: portrait) {
-    .map {
-        background-image: url("../images/2-3\ 地圖原圖.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 1;
-    }
-} */
 
 h1 {
     margin-bottom: 1em;

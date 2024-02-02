@@ -1,8 +1,8 @@
-import backgroundImg from '../../assets/images/1-1removebg.png';
-import mobileBackgroundImg from '../../assets/images/mobile_1-1.png';
-import newsImg from '../../assets/images/1-1-1.png';
-import newsBgImg from '../../assets/images/1-1 報紙背景 .png'
-import MdfkImg from '../../assets/images/1-1-2.png';
+import backgroundImg from '../../assets/images/1-1removebg.webp';
+import mobileBackgroundImg from '../../assets/images/mobile_1-1.webp';
+import newsImg from '../../assets/images/1-1-1.webp';
+import newsBgImg from '../../assets/images/1-1 報紙背景 .webp'
+import MdfkImg from '../../assets/images/1-1-2.webp';
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 

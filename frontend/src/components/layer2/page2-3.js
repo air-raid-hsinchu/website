@@ -1,5 +1,5 @@
-import mapImg from "../../assets/images/2-3bg.png";
-import mobileMapImg from "../../assets/images/mobile_2-3bg.png";
+import mapImg from "../../assets/images/2-3bg.webp";
+import mobileMapImg from "../../assets/images/mobile_2-3bg.webp";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "@mui/material";
