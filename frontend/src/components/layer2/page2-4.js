@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import "../../assets/styles/detail.css";
-import classImg from "../../assets/images/2-4校園授權版.jpeg";
-import playerBg from "../../assets/images/layer2Mobilebg.png";
+import classImg from "../../assets/images/2-4校園授權版.webp";
+import playerBg from "../../assets/images/layer2Mobilebg.webp";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
 import Player from "../audioPlayer";
 import pageAudio from "../../assets/audio/1938 誉れの軍夫(榮譽的軍夫)1934[雨夜花]重新填詞之日軍宣傳歌曲.mp3";
-import Img1 from "../../assets/images/2-4 圖一.png";
-import Img2 from "../../assets/images/2-4 圖二.jpeg";
-import Img3 from "../../assets/images/2-4 圖三.png";
+import Img1 from "../../assets/images/2-4 圖一.webp";
+import Img2 from "../../assets/images/2-4 圖二.webp";
+import Img3 from "../../assets/images/2-4 圖三.webp";
 
 const fadeInOptions = {
   timeout: { enter: 1000, exit: 0 },

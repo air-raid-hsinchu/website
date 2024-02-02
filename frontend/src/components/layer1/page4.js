@@ -21,10 +21,10 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
     };
 
     const containerTransition = {
-        entering: { height: size.height + toggleDelta },
-        entered: { height: size.height + toggleDelta },
-        exiting: { height: size.height },
-        exited: { height: size.height },
+        entering: { opacity: 1,height: size.height + toggleDelta },
+        entered: { opacity: 1,height: size.height + toggleDelta },
+        exiting: { opacity: 0.5,height: size.height },
+        exited: { opacity: 0.5,height: size.height },
     };
 
     const contentTransition = {
@@ -66,6 +66,7 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
                             ...contentTransition[state],
                             whiteSpace: 'pre-wrap',
                             zIndex: zIndex,
+                            cursor: 'pointer',
                         }}
                     >
                         {content}
@@ -82,7 +83,7 @@ const PositionPin = ({ offset, size, content, title, contentPosition, contentWid
                             left: offset.x - size.width / 2,
                             width: size.width,
                             height: size.height,
-                            transition: 'height 0.5s ease-in-out',
+                            transition: 'all 0.5s ease-in-out',
                             ...containerTransition[state],
                             zIndex: zIndex,
                         }}
@@ -152,7 +153,6 @@ const Page4 = ({ isMobile }) => {
         if (isMobile) {
             let counterId = setInterval(() => {
                 setCounter(counter => counter + 1);
-                console.log(counter);
             }, 3000);
             setCounterId(counterId);
         }

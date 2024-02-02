@@ -18,7 +18,7 @@ const Page21 = () => {
         setIsMobile(window.innerHeight > window.innerWidth);
         });
     }, []);
-    const fs = isMobile ? 10 : 5;
+
     return (
         <Fade in={true} timeout={fadeInOptions.timeout}>
             <div className="background">
