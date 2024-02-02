@@ -397,7 +397,7 @@ const Page23 = () => {
                                         </div>
                                     </div>
 
-                                    {(hover === 1 || hover === 0) && (
+                                    {/* {(hover === 1 || hover === 0) && ( */}
                                         <div onTouchStart={() => handleClick(1)}>
                                             <MobileMapPin
                                                 offset={{ x: bgImgOffset.x + bgImgSize.width * 0.102, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
@@ -413,8 +413,8 @@ const Page23 = () => {
                                                 up={true}
                                             />
                                         </div>
-                                    )}
-                                    {(hover === 2 || hover === 0) && (
+                                    {/* )} */}
+                                    {/* {(hover === 2 || hover === 0) && ( */}
 
                                         <div onTouchStart={() => handleClick(2)}>
                                             <MobileMapPin
@@ -433,8 +433,8 @@ const Page23 = () => {
                                                 up={false}
                                             />
                                         </div>
-                                    )}
-                                    {(hover === 3 || hover === 0) && (
+                                    {/* )} */}
+                                    {/* {(hover === 3 || hover === 0) && ( */}
                                         <div onTouchStart={() => handleClick(3)}>
                                             <MobileMapPin
                                                 offset={{ x: bgImgOffset.x + bgImgSize.width * 0.592, y: bgImgOffset.y + bgImgSize.height * 0.531 }}
@@ -451,9 +451,9 @@ const Page23 = () => {
                                                 up={true}
                                             />
                                         </div>
-                                    )}
+                                    {/* )} */}
 
-                                    {(hover === 3 || hover === 0) && (
+                                    {/* {(hover === 3 || hover === 0) && ( */}
                                         <div onTouchStart={() => handleClick(3)}>
                                             <MobileMapPin
                                                 offset={{ x: bgImgOffset.x + bgImgSize.width * 0.541, y: bgImgOffset.y + bgImgSize.height * 0.608 }}
@@ -467,8 +467,8 @@ const Page23 = () => {
                                                 up={false}
                                             />
                                         </div>
-                                    )}
-                                    {(hover === 3 || hover === 0) && (
+                                    {/* )} */}
+                                    {/* {(hover === 3 || hover === 0) && ( */}
                                         <div onTouchStart={() => handleClick(3)}>
                                             <MobileMapPin
                                                 offset={{ x: bgImgOffset.x + bgImgSize.width * 0.74, y: bgImgOffset.y + bgImgSize.height * 0.599 }}
@@ -479,8 +479,8 @@ const Page23 = () => {
                                                 up={true}
                                             />
                                         </div>
-                                    )}
-                                    {(hover === 4 || hover === 0) && (
+                                    {/* )} */}
+                                    {/* {(hover === 4 || hover === 0) && ( */}
                                         <div onTouchStart={() => handleClick(4)}>
                                             <MobileMapPin
                                                 offset={{ x: bgImgOffset.x + bgImgSize.width * 0.948, y: bgImgOffset.y + bgImgSize.height * 0.6 }}
@@ -498,7 +498,7 @@ const Page23 = () => {
                                                 up={false}
                                             />
                                         </div>
-                                    )}
+                                    {/* )} */}
 
                                 </div>
                             </div>
