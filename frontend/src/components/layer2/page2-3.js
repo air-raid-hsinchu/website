@@ -1,5 +1,5 @@
 import mapImg from "../../assets/images/2-3bg.webp";
-import mobileMapImg from "../../assets/images/mobile_2-3bg.webp";
+import mobileMapImg from "../../assets/images/mobile_2-3bg1.webp";
 import { useRef, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Fade } from "@mui/material";
@@ -75,7 +75,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition, isMobile }) 
                             marginBottom: 0,
                             overflow: 'visible',
                             fontSize: `${title_size}`,
-                            ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 10 }
+                            ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 5 }
                                 :
                                 { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' }),
 
@@ -159,7 +159,7 @@ const MapPin = ({ offset, size, data, field, isHover, infoPosition, isMobile }) 
 }
 
 const MobileMapPin = ({ offset, size, data, field, isHover, infoPosition, overflow = false, up = false }) => {
-    const pinSize = 6;
+    const pinSize = 4;
     const title_size = "0.8rem";
     const text_size = "0.6rem";
     const containerRef = useRef(null);
@@ -220,7 +220,7 @@ const MobileMapPin = ({ offset, size, data, field, isHover, infoPosition, overfl
                                     marginBottom: 0,
                                     overflow: 'visible',
                                     fontSize: `${title_size}`,
-                                    ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 10 }
+                                    ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 5 }
                                         :
                                         { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' }),
 
@@ -252,10 +252,11 @@ const MobileMapPin = ({ offset, size, data, field, isHover, infoPosition, overfl
 
                             <pre
                                 style={{
+                                    ...(overflow && { marginRight: 10 }),
                                     marginBottom: 0,
                                     overflow: 'visible',
                                     fontSize: `${title_size}`,
-                                    ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 10 }
+                                    ...(isHover ? { fontFamily: 'shstc-bold', WebkitTextStroke: '.3px black', backgroundColor: 'rgba(0, 0, 0, 0.2)', paddingInline: 5 }
                                         :
                                         { fontFamily: 'shstc-semibold', WebkitTextStroke: '.5px grey' }),
 
@@ -267,12 +268,13 @@ const MobileMapPin = ({ offset, size, data, field, isHover, infoPosition, overfl
                                 <>
                                     {data.subLandmark.map((item, index) => (
                                         <pre key={index} style={{
+                                            ...(overflow && { marginRight: 10 }),
                                             fontSize: `${text_size}`,
                                             overflow: 'visible',
                                             marginBottom: 0,
                                             fontFamily: 'shstc-semibold',
                                             backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                                            paddingInline: 10
+                                            paddingInline: 5
                                         }}>{item}</pre>
                                     ))}
                                 </>
@@ -332,7 +334,7 @@ const Page23 = () => {
     }
 
     const getBackgroundImageDimensions = () => {
-        const currentWidth = window.innerWidth * (isMobile ? 0.85 : 1);
+        const currentWidth = window.innerWidth;
         const img = new Image();
         img.src = isMobile ? mobileMapImg : mapImg;
 
@@ -398,106 +400,103 @@ const Page23 = () => {
                                     </div>
 
                                     {/* {(hover === 1 || hover === 0) && ( */}
-                                        <div onTouchStart={() => handleClick(1)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.102, y: bgImgOffset.y + bgImgSize.height * 0.39 }}
-                                                size={{ width: 100, height: 50 }}
-                                                data={{
-                                                    landmark: '新竹機場',
-                                                    date: '1945年1月17日',
-                                                    description: '第二十航空隊選定新竹飛行場為轟炸目標，從上午10至11時，對新竹機場投下1,459枚500磅炸彈，459枚500磅燒夷彈。此次空襲造成新竹飛行場附近電話線、高壓電線和水管破裂。'
-                                                }}
-                                                infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.065, y: bgImgOffset.y + bgImgSize.height * 0.55 }}
-                                                isHover={hover === 1}
-                                                isMobile={isMobile}
-                                                up={true}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(1)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.12, y: bgImgOffset.y + bgImgSize.height * 0.42 }}
+                                            size={{ width: 100, height: 50 }}
+                                            data={{
+                                                landmark: '新竹機場',
+                                                date: '1945年1月17日',
+                                                description: '第二十航空隊選定新竹飛行場為轟炸目標，從上午10至11時，對新竹機場投下1,459枚500磅炸彈，459枚500磅燒夷彈。此次空襲造成新竹飛行場附近電話線、高壓電線和水管破裂。'
+                                            }}
+                                            infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.065, y: bgImgOffset.y + bgImgSize.height * 0.55 }}
+                                            isHover={hover === 1}
+                                            isMobile={isMobile}
+                                            up={true}
+                                        />
+                                    </div>
                                     {/* )} */}
                                     {/* {(hover === 2 || hover === 0) && ( */}
 
-                                        <div onTouchStart={() => handleClick(2)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.371, y: bgImgOffset.y + bgImgSize.height * 0.64 }}
-                                                size={{ width: 150, height: 50 }}
-                                                data={{
-                                                    landmark: '西大路一帶',
-                                                    subLandmark: ['新竹市新興町、黑金町'],
-                                                    date: '1945年3月17日',
-                                                    description: '第五航空隊第22大隊第2 、19、 33、 408轟炸中隊21架Ｂ-24以1,000磅炸彈轟炸新竹市區和鐵路設施，市內新興町、黑金町（今新竹市東區西大路和客雅溪之間，和今新竹車站東側）一帶的電信電話線和運輸電線因此被切斷，多處房屋燒毀。'
-                                                }}
-                                                infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.18, y: bgImgOffset.y + bgImgSize.height * 0.75 }}
-                                                field={{ width: 80, height: 70, x: bgImgOffset.x + bgImgSize.width * 0.33, y: bgImgOffset.y + bgImgSize.height * 0.58, rot: 'rotate(-35deg)' }}
-                                                isHover={hover === 2}
-                                                isMobile={isMobile}
-                                                up={false}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(2)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.37, y: bgImgOffset.y + bgImgSize.height * 0.641 }}
+                                            size={{ width: 150, height: 50 }}
+                                            data={{
+                                                landmark: '西大路一帶',
+                                                subLandmark: ['新竹市新興町、黑金町'],
+                                                date: '1945年3月17日',
+                                                description: '第五航空隊第22大隊第2 、19、 33、 408轟炸中隊21架Ｂ-24以1,000磅炸彈轟炸新竹市區和鐵路設施，市內新興町、黑金町（今新竹市東區西大路和客雅溪之間，和今新竹車站東側）一帶的電信電話線和運輸電線因此被切斷，多處房屋燒毀。'
+                                            }}
+                                            field={{ width: 40, height: 40, x: bgImgOffset.x + bgImgSize.width * 0.35, y: bgImgOffset.y + bgImgSize.height * 0.613, rot: 'rotate(-35deg)' }}
+                                            isHover={hover === 2}
+                                            isMobile={isMobile}
+                                            up={false}
+                                        />
+                                    </div>
                                     {/* )} */}
                                     {/* {(hover === 3 || hover === 0) && ( */}
-                                        <div onTouchStart={() => handleClick(3)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.592, y: bgImgOffset.y + bgImgSize.height * 0.531 }}
-                                                size={{ width: 189, height: 60 }}
-                                                data={{
-                                                    landmark: '遠東巨城購物中心',
-                                                    subLandmark: ['大日本帝國製糖', '株式會社新竹製糖廠所'],
-                                                    date: '1945年5月15日',
-                                                    description: 'B24轟炸大隊於中午時刻飛往新竹市，聯合以250磅炸彈轟炸新竹市區。新竹市東區幾乎全燬，市區多處被炸燬破壞，大火持續延燒三日才止息，為最慘重之紀錄。位於市中心的新竹驛房屋頂遭炸毀，當天新竹紡織工場五棟全壞、大日本帝國製糖株式會社新竹製糖廠所的工場六棟全燒燬。'
-                                                }}
-                                                infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.5, y: bgImgOffset.y + bgImgSize.height * 0.6 }}
-                                                isHover={hover === 3}
-                                                isMobile={isMobile}
-                                                up={true}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(3)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.561, y: bgImgOffset.y + bgImgSize.height * 0.542 }}
+                                            size={{ width: 189, height: 60 }}
+                                            data={{
+                                                landmark: '遠東巨城購物中心',
+                                                subLandmark: ['大日本帝國製糖', '株式會社新竹製糖廠所'],
+                                                date: '1945年5月15日',
+                                                description: 'B24轟炸大隊於中午時刻飛往新竹市，聯合以250磅炸彈轟炸新竹市區。新竹市東區幾乎全燬，市區多處被炸燬破壞，大火持續延燒三日才止息，為最慘重之紀錄。位於市中心的新竹驛房屋頂遭炸毀，當天新竹紡織工場五棟全壞、大日本帝國製糖株式會社新竹製糖廠所的工場六棟全燒燬。'
+                                            }}
+                                            isHover={hover === 3}
+                                            isMobile={isMobile}
+                                            up={true}
+                                        />
+                                    </div>
                                     {/* )} */}
 
                                     {/* {(hover === 3 || hover === 0) && ( */}
-                                        <div onTouchStart={() => handleClick(3)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.541, y: bgImgOffset.y + bgImgSize.height * 0.608 }}
-                                                size={{ width: 70, height: 50 }}
-                                                data={{
-                                                    landmark: '新竹火車站',
-                                                    subLandmark: ['新竹驛']
-                                                }}
-                                                isHover={hover === 3}
-                                                isMobile={isMobile}
-                                                up={false}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(3)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.512, y: bgImgOffset.y + bgImgSize.height * 0.61 }}
+                                            size={{ width: 70, height: 50 }}
+                                            data={{
+                                                landmark: '新竹火車站',
+                                                subLandmark: ['新竹驛']
+                                            }}
+                                            isHover={hover === 3}
+                                            isMobile={isMobile}
+                                            up={false}
+                                        />
+                                    </div>
                                     {/* )} */}
                                     {/* {(hover === 3 || hover === 0) && ( */}
-                                        <div onTouchStart={() => handleClick(3)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.74, y: bgImgOffset.y + bgImgSize.height * 0.599 }}
-                                                size={{ width: 160, height: 50 }}
-                                                data={{ landmark: '新光紡織公司', subLandmark: ['新竹紡織工場'] }}
-                                                isHover={hover === 3}
-                                                isMobile={isMobile}
-                                                up={true}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(3)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.694, y: bgImgOffset.y + bgImgSize.height * 0.605 }}
+                                            size={{ width: 160, height: 50 }}
+                                            data={{ landmark: '新光紡織公司', subLandmark: ['新竹紡織工場'] }}
+                                            isHover={hover === 3}
+                                            isMobile={isMobile}
+                                            up={true}
+                                        />
+                                    </div>
                                     {/* )} */}
                                     {/* {(hover === 4 || hover === 0) && ( */}
-                                        <div onTouchStart={() => handleClick(4)}>
-                                            <MobileMapPin
-                                                offset={{ x: bgImgOffset.x + bgImgSize.width * 0.948, y: bgImgOffset.y + bgImgSize.height * 0.6 }}
-                                                size={{ width: 100, height: 100 }}
-                                                data={{
-                                                    landmark: ['六燃大煙囪'],
-                                                    subLandmark: ['日本海軍第六燃料廠\n新竹支廠'],
-                                                    date: '1944年10月14日',
-                                                    description: '第六燃料廠新竹支廠有34名工廠員工被炸死，並且數座油槽傾倒。\n日本海軍第六燃料廠新竹支廠，為因應日本太平洋戰爭的軍事生產需求而生，用以製造航空燃料的加工劑異辛烷。為日軍重要軍事基地，因此多次遭到轟炸。'
-                                                }}
-                                                infoPosition={{ x: bgImgOffset.x + bgImgSize.width * 0.72, y: bgImgOffset.y + bgImgSize.height * 0.56 }}
-                                                isHover={hover === 4}
-                                                isMobile={isMobile}
-                                                overflow={true}
-                                                up={false}
-                                            />
-                                        </div>
+                                    <div onTouchStart={() => handleClick(4)}>
+                                        <MobileMapPin
+                                            offset={{ x: bgImgOffset.x + bgImgSize.width * 0.879, y: bgImgOffset.y + bgImgSize.height * 0.611 }}
+                                            size={{ width: 100, height: 100 }}
+                                            data={{
+                                                landmark: ['六燃大煙囪'],
+                                                subLandmark: ['日本海軍第六燃料廠', '新竹支廠'],
+                                                date: '1944年10月14日',
+                                                description: '第六燃料廠新竹支廠有34名工廠員工被炸死，並且數座油槽傾倒。\n日本海軍第六燃料廠新竹支廠，為因應日本太平洋戰爭的軍事生產需求而生，用以製造航空燃料的加工劑異辛烷。為日軍重要軍事基地，因此多次遭到轟炸。'
+                                            }}
+                                            isHover={hover === 4}
+                                            isMobile={isMobile}
+                                            overflow={true}
+                                            up={false}
+                                        />
+                                    </div>
                                     {/* )} */}
 
                                 </div>

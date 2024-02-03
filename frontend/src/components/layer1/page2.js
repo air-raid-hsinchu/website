@@ -79,7 +79,7 @@ const Page2 = ({ isMobile }) => {
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
         };
-    }, [isMobile])
+    }, [isMobile, bgImgSize.width, bgImgSize.height])
 
     return (
         <>
