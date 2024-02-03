@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import img1 from "../../assets/images/1-2.jpg"; // 空襲底下的人民生活
-import img2 from "../../assets/images/1-3.png"; // 二站新竹空襲地圖
+import img2 from "../../assets/images/1-3.webp"; // 二站新竹空襲地圖
 import img3 from "../../assets/images/1-4.jpg"; // 黃旺成與踈開
 
-import mobileBackgroundImg from "../../assets/images/mobile_1-2.png"
-import backgroundImg from "../../assets/images/bg21.png" // 背景圖片
+import mobileBackgroundImg from "../../assets/images/mobile_1-2.webp"
+import backgroundImg from "../../assets/images/bg21.webp" // 背景圖片
 import { useRef, useState, useEffect } from "react";
 
 const ImageCard = ({ imgSrc, imgAlt, imgText, size, offset, fs }) => {
@@ -49,7 +49,7 @@ const Page3 = ({ isMobile }) => {
         return () => {
             window.removeEventListener("resize", getBackgroundImageDimensions);
         };
-    }, [containerRef.current, isMobile]);
+    }, [isMobile, bgImgSize.width, bgImgSize.height]);
 
     const getBackgroundImageDimensions = () => {
         const container = containerRef.current;
@@ -101,7 +101,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n空\n襲\n底\n下\n的\n人\n民\n生\n活\n﹀"}
                                 size={{ height: bgImgSize.height * 0.298, width: bgImgSize.width * 0.36 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.2, x: bgImgOffset.x + bgImgSize.width * 0.111 }}
-                                fs={5}
+                                fs={6}
                             />
                         </Link>
                         <Link to='/detail3'>
@@ -111,7 +111,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"〈二戰新竹空襲地圖〉"}
                                 size={{ height: bgImgSize.height * 0.251, width: bgImgSize.width * 0.789 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.623, x: bgImgOffset.x + bgImgSize.width * 0.108 }}
-                                fs={5}
+                                fs={6}
                             />
                         </Link>
                         <Link to='/detail4'>
@@ -122,7 +122,7 @@ const Page3 = ({ isMobile }) => {
                                 imgText={"︿\n黃\n旺\n成\n與\n踈\n開\n﹀"}
                                 size={{ height: bgImgSize.height * 0.298, width: bgImgSize.width * 0.336 }}
                                 offset={{ y: bgImgOffset.y + bgImgSize.height * 0.2, x: bgImgOffset.x + bgImgSize.width * 0.557 }}
-                                fs={5}
+                                fs={6}
                             />
                         </Link>
 

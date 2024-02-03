@@ -1,7 +1,7 @@
 import "../../assets/styles/detail.css";
-import classImg from "../../assets/images/2-2class.png";
-import playerBg from "../../assets/images/layer2Mobilebg.png";
-import Img1 from "../../assets/images/2-2 圖一.png";
+import classImg from "../../assets/images/2-2class.webp";
+import playerBg from "../../assets/images/layer2Mobilebg.webp";
+import Img1 from "../../assets/images/2-2 圖一.webp";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";

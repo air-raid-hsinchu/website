@@ -1,4 +1,4 @@
-import bgImg from "../../assets/images/2-5bg.png";
+import bgImg from "../../assets/images/2-5bg.webp";
 import { Fade } from "@mui/material";
 import SocialBar from "../socialBar";
 import { Link } from "react-router-dom";
