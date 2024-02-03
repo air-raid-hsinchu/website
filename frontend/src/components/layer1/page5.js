@@ -12,7 +12,7 @@ const Page5 = () => {
                     <p>假日：10:00～19:30</p>
                     <h1 style={{fontFamily: 'nstc-bold'}}>聯絡我們</h1>
                     <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bombingofhsinchiku2024@gmail.com" target="_blank">bombingofhsinchiku2024@gmail.com</a></p>
-                    <p><a href="https://docs.google.com/forms/d/1CCLZ9vXNUky109By1l0D7RC6Sf9jkCAAPooYBql5dhk/prefill">預約導覽表單</a></p>
+                    <p><a href="https://forms.gle/3T1aeV43DG5fsCo97">預約導覽表單</a></p>
                 </div>
             </div>
 
